@@ -30,7 +30,8 @@ Features summarized:
 ### Guides
 A conceptual overview of the project.
 
-[TODO: Add screenshot]
+<img src="https://imgur.com/dBBHo9M" alt="Example screenshot" />
+(Concept example)
 
 Authored guides can be added as Markdown files in the _docs_ directory.
 These files are automatically added to the project page's table of contents.
@@ -38,7 +39,8 @@ These files are automatically added to the project page's table of contents.
 ### Class heirarchy
 A high-level view of the project's modules and their interactions.
 
-[TODO: Add screenshot]
+<img src="https://imgur.com/PPttJFC" alt="Example screenshot" />
+(Concept example)
 
 Classes, interfaces, functions, etc. are mapped and linked. If available, API docs are generated.
 Any markdown files found in the same folder are added to the page.
@@ -46,13 +48,14 @@ Any markdown files found in the same folder are added to the page.
 ### Literate source code
 A low-level view of the individual source files.
 
-[TODO: Add screenshot]
+<img src="https://imgur.com/8mshWSk" alt="Example screenshot" />
+(Concept example)
 
 Docstrings and source comments are displayed alongside their relevant code sections.
 Any markdown files found in the same folder are added to the page.
 Markdown comments are supported.
 
-_(Literate here refers to [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming))_
+<small>_(Literate here refers to [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming))_</small>
 
 ## Languages
 Document generation is delegated to the appropriate library for the project language.
