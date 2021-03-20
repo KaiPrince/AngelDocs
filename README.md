@@ -17,8 +17,6 @@ This project was inspired by the principles of _Living Documentation_.
 [TODO]
 
 ## Features
-[TODO]
-
 Features summarized:
 * Write comments in Markdown
 * Output to HTML or Markdown
