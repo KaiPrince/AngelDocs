@@ -31,7 +31,6 @@ Features summarized:
 A conceptual overview of the project.
 
 <img src="https://imgur.com/dBBHo9M.png" alt="Example screenshot" width="500" />
-(Concept example)
 
 Authored guides can be added as Markdown files in the _docs_ directory.
 These files are automatically added to the project page's table of contents.
@@ -40,7 +39,6 @@ These files are automatically added to the project page's table of contents.
 A high-level view of the project's modules and their interactions.
 
 <img src="https://imgur.com/PPttJFC.png" alt="Example screenshot" width="500" />
-(Concept example)
 
 Classes, interfaces, functions, etc. are mapped and linked. If available, API docs are generated.
 Any markdown files found in the same folder are added to the page.
@@ -49,7 +47,6 @@ Any markdown files found in the same folder are added to the page.
 A low-level view of the individual source files.
 
 <img src="https://imgur.com/8mshWSk.png" alt="Example screenshot" width="500" />
-(Concept example)
 
 Docstrings and source comments are displayed alongside their relevant code sections.
 Any markdown files found in the same folder are added to the page.
