@@ -8,9 +8,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="angel-docs" />
-    <orderEntry type="module" module-name="docs" />
-    <orderEntry type="module" module-name="docs" />
-    <orderEntry type="module" module-name="docs" />
   </component>
 </module>
