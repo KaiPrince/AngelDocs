@@ -1,8 +1,12 @@
-const description = require("../package.json");
+const { description } = require("../package.json");
 
-/**
- * Generates paths to all files for the sidebar. */
-const generateRoutes = () => {};
+const { projects } = require("../siteConfig.json");
+const project_links = projects.map((project) => ({
+  text: project.name,
+  link: project.path,
+  target: "_blank",
+  rel: "noopener noreferrer",
+}));
 
 module.exports = {
   title: process.env.APP_TITLE || "AngelDocs",
@@ -25,11 +29,7 @@ module.exports = {
         link: "/config/",
         activeMatch: "^/config/",
       },
-      {
-        text: "Docs",
-        link: "/docs/",
-        activeMatch: "^/docs/",
-      },
+      ...project_links,
       {
         text: "VitePress",
         link: "https://vitepress.vuejs.org",
@@ -40,12 +40,6 @@ module.exports = {
         {
           text: "Guide",
           children: [{ text: "using-vue", link: "/guide/using-vue" }],
-        },
-      ],
-      "/docs/": [
-        {
-          text: "Docs",
-          children: [{ text: "test", link: "/docs/test" }],
         },
       ],
     },

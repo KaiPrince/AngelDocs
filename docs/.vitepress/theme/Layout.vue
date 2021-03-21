@@ -1,10 +1,10 @@
 <template>
-  <DefaultLayout> </DefaultLayout>
+  <div>
+    <DefaultLayout> </DefaultLayout>
+  </div>
 </template>
 
 <script>
 import DefaultTheme from "vitepress/theme";
-export default {
-  components: { DefaultLayout: DefaultTheme.Layout },
-};
+export default {};
 </script>
