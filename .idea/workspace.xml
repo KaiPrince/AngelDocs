@@ -1,7 +1,508 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c341048c-fb90-471f-9112-37401af56e47" name="Default Changelist" comment="" />
+    <list default="true" id="c341048c-fb90-471f-9112-37401af56e47" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Markdown-3.3.4.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Markdown-3.3.4.dist-info/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Markdown-3.3.4.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Markdown-3.3.4.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Markdown-3.3.4.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Markdown-3.3.4.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Markdown-3.3.4.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pycco-0.6.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pycco-0.6.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pycco-0.6.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pycco-0.6.0.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pycco-0.6.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pycco-0.6.0.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pycco-0.6.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/Pygments-2.8.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/_distutils_hack/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/_distutils_hack/override.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/COPYING.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/beautifulsoup4-4.9.3.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/builder/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/builder/_html5lib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/builder/_htmlparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/builder/_lxml.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/dammit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/diagnose.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/element.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/formatter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/test_builder_registry.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/test_docs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/test_html5lib.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/test_htmlparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/test_lxml.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/test_soup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/bs4/tests/test_tree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/distutils-precedence.pth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/__meta__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/blockparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/blockprocessors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/abbr.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/admonition.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/attr_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/codehilite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/def_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/extra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/fenced_code.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/footnotes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/legacy_attrs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/legacy_em.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/md_in_html.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/meta.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/nl2br.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/sane_lists.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/smarty.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/tables.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/toc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/extensions/wikilinks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/htmlparser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/inlinepatterns.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/pep562.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/postprocessors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/preprocessors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/test_tools.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/treeprocessors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdown/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify-0.6.5.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify-0.6.5.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify-0.6.5.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify-0.6.5.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify-0.6.5.dist-info/REQUESTED" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify-0.6.5.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify-0.6.5.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/markdownify/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip-21.0.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip-21.0.1.dist-info/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip-21.0.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip-21.0.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip-21.0.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip-21.0.1.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip-21.0.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_internal/resolution/resolvelib/found_candidates.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_internal/resolution/resolvelib/reporter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_vendor/chardet/langrussianmodel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_vendor/chardet/metadata/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_vendor/chardet/metadata/languages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_vendor/urllib3/_version.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_vendor/urllib3/util/proxy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pip/_vendor/urllib3/util/ssltransport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pkg_resources/_vendor/packaging/_typing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pkg_resources/tests/data/my-test-package-source/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pycco/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pycco/compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pycco/generate_index.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pycco/languages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pycco/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pycco_resources/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/__main__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/cmdline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/console.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/filter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/filters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/_mapping.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/bbcode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/html.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/img.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/irc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/latex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/other.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/rtf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/svg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/terminal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/formatters/terminal256.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_asy_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_cl_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_cocoa_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_csound_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_lasso_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_lua_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_mapping.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_mql_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_mysql_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_openedge_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_php_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_postgres_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_scilab_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_sourcemod_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_stan_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_stata_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_tsql_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_usd_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_vbscript_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/_vim_builtins.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/actionscript.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/agile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/algebra.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ambient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/amdgpu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ampl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/apl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/archetype.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/arrow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/asm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/automation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/bare.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/bibtex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/boa.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/business.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/c_cpp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/c_like.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/capnproto.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/cddl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/chapel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/clean.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/compiled.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/configs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/console.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/crystal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/csound.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/css.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/d.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/dalvik.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/devicetree.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/diff.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/dotnet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/dsls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/dylan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ecl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/eiffel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/elm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/email.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/erlang.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/esoteric.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ezhil.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/factor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/fantom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/felix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/floscript.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/forth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/fortran.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/foxpro.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/freefem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/functional.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/futhark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/gdscript.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/go.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/grammar_notation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/graphics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/graphviz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/haskell.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/haxe.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/hdl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/hexdump.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/html.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/idl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/igor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/inferno.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/installers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/int_fiction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/iolang.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/j.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/javascript.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/julia.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/jvm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/lisp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/make.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/markup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/math.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/matlab.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/mime.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ml.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/modeling.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/modula2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/monte.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/mosel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ncl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/nimrod.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/nit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/nix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/oberon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/objective.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ooc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/other.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/parasail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/parsers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/pascal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/pawn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/perl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/php.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/pointless.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/pony.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/praat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/prolog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/promql.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/python.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/qvt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/r.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/rdf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/rebol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/resource.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ride.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/rnc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/roboconf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/robotframework.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/ruby.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/rust.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/sas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/scdoc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/scripting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/sgf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/shell.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/sieve.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/slash.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/smalltalk.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/smv.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/snobol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/solidity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/special.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/sql.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/stata.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/supercollider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/tcl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/templates.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/teraterm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/testing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/text.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/textedit.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/textfmts.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/theorem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/tnt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/trafficscript.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/typoscript.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/unicon.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/urbi.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/usd.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/varnish.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/verification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/web.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/webidl.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/webmisc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/whiley.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/x10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/xorg.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/yang.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/lexers/zig.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/modeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/plugin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/regexopt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/scanner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/sphinxext.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/style.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/abap.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/algol.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/algol_nu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/arduino.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/autumn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/borland.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/bw.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/colorful.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/default.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/emacs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/friendly.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/fruity.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/igor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/inkpot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/lovelace.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/manni.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/material.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/monokai.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/murphy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/native.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/paraiso_dark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/paraiso_light.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/pastie.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/perldoc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/rainbow_dash.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/rrt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/sas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/solarized.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/stata_dark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/stata_light.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/tango.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/trac.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/vim.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/vs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/xcode.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/styles/zenburn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/token.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/unistring.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pygments/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache-0.5.4-py3.9.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache-0.5.4-py3.9.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache-0.5.4-py3.9.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache-0.5.4-py3.9.egg-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache-0.5.4-py3.9.egg-info/installed-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache-0.5.4-py3.9.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/commands/render.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/commands/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/context.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/init.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/locator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/parsed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/renderengine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/renderer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/specloader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/template_spec.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/benchmark.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/common.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/ascii.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/duplicate.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/locator/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/locator/duplicate.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/locator/template.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/non_ascii.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/sample_view.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/say_hello.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/data/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/doctesting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/comments.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/comments.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/complex.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/complex.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/delimiters.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/delimiters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/double_section.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/double_section.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/escaped.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/escaped.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/inner_partial.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/inner_partial.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/inverted.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/inverted.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/lambdas.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/lambdas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/looping_partial.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/nested_context.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/nested_context.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/partial_in_partial.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/partial_with_lambda.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/partial_with_partial_and_lambda.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/partials_with_lambdas.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/readme.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/say_hello.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/simple.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/tagless.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/template_partial.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/template_partial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/template_partial.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/unescaped.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/unescaped.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/unicode_input.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/unicode_input.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/unicode_output.mustache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/examples/unicode_output.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/spectesting.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test___init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_commands.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_context.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_defaults.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_examples.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_locator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_pystache.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_renderengine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_renderer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_simple.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/pystache/tests/test_specloader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools-54.1.2.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools/_distutils/command/py37compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools/_distutils/py35compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools/_distutils/py38compat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/setuptools/_vendor/packaging/_typing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/six-1.15.0.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/six-1.15.0.dist-info/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/six-1.15.0.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/six-1.15.0.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/six-1.15.0.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/six-1.15.0.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/six.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/smartypants-2.0.1.dist-info/DESCRIPTION.rst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/smartypants-2.0.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/smartypants-2.0.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/smartypants-2.0.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/smartypants-2.0.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/smartypants-2.0.1.dist-info/metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/smartypants.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve-2.2.1.dist-info/INSTALLER" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve-2.2.1.dist-info/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve-2.2.1.dist-info/METADATA" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve-2.2.1.dist-info/RECORD" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve-2.2.1.dist-info/WHEEL" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve-2.2.1.dist-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve/__meta__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve/css_match.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve/css_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve/css_types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/soupsieve/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/tests/test_advanced.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/tests/test_args.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/tests/test_basic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/tests/test_conversions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/tests/test_escaping.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Lib/site-packages/tests/test_pycco.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/markdown_py.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/pycco.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/pygmentize.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/pystache-script.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/pystache-test-script.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/pystache-test.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/pystache.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/angel-docs/venv/Scripts/smartypants" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +511,20 @@
   <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
+    </option>
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -34,10 +549,13 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -50,6 +568,7 @@
       <updated>1616277950580</updated>
       <workItem from="1616277954475" duration="3219000" />
       <workItem from="1616286906629" duration="1688000" />
+      <workItem from="1616307727456" duration="3722000" />
     </task>
     <task id="LOCAL-00001" summary="Add .idea folder.">
       <created>1616286791722</created>
@@ -65,7 +584,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616286817779</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add .gitignore">
+      <created>1616311456446</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1616311456447</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add .gitignore">
+      <created>1616311487338</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1616311487338</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,6 +620,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Add .idea folder." />
     <MESSAGE value="Fix typos in README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix typos in README.md" />
+    <MESSAGE value="Add .gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add .gitignore" />
   </component>
 </project>
