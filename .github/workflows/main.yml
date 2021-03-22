@@ -49,6 +49,9 @@ jobs:
           python main.py -p angel-docs **/*.py
       - name: Run site generator
         working-directory: docs/
+        env:
+          BASE_URL: AngelDocs
+          REPO: ${{ github.repository }}
         run: |
           yarn
           yarn build
