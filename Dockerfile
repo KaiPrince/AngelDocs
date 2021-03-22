@@ -16,5 +16,6 @@ RUN pip install --no-cache-dir -r src/angel-docs/requirements.txt
 # Set up node
 RUN yarn --cwd docs install --frozen-lockfile
 
+COPY action.sh /action.sh
 
-ENTRYPOINT [ "action.sh" ]
+ENTRYPOINT [ "/action.sh.sh" ]
