@@ -50,7 +50,7 @@ jobs:
       - name: Run site generator
         working-directory: docs/
         env:
-          BASE_URL: AngelDocs
+          BASE_URL: /AngelDocs
           REPO: ${{ github.repository }}
         run: |
           yarn
