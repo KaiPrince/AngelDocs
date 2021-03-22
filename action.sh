@@ -9,6 +9,9 @@
 # ..quit on error
 set -e
 
+
+shopt -s globstar # Required to use '**'
+
 # Run document generator
 python src/angel-docs/main.py "$@"
 
