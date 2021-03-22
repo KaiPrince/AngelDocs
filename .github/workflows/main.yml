@@ -27,12 +27,20 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - uses: KaiPrince/AngelDocs@v0.1
-        with:
-          files: src/**/*
+      # - uses: KaiPrince/AngelDocs@v0.1
+      #   with:
+      #     files: src/**/*
+      - name: Run doc generator
+        working-directory: src/angel-docs/
+        run: |
+          python main.py -p angel-docs **/*.py
+      - name: Run site generator
+        working-directory: docs/
+        run: |
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
+          folder: docs/.vitepress/dist # The folder the action should deploy.
