@@ -1,0 +1,69 @@
+/**
+ * Custom palette here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/zh/config/#palette-styl
+ */
+:root {
+  --primaryColor: #2c3e50;
+  /* --secondaryColor: #30455c; */
+  --secondaryColor: #476582;
+  --tertiaryColor: #696969;
+
+  --accentColor: #fef4e8;
+  --textColor: #f8f8f8;
+  --borderColor: var(--tertiaryColor);
+  --codeBgColor: #282c34;
+
+  --linkColor: var(--tertiaryColor);
+  --linkHoverColor: darken(var(--tertiaryColor), 30%);
+
+  --c-brand: var(--linkColor);
+  --c-divider: var(--borderColor);
+}
+
+/**
+ * Custom Styles here.
+ *
+ * ref：https://v1.vuepress.vuejs.org/config/#index-styl
+ */
+
+.container :is(h1, h2, h3, h4, h5, h6) {
+  color: var(--primaryColor);
+}
+
+.container :is(a, .link) {
+  text-decoration: revert;
+  color: var(--linkColor);
+}
+
+.container :is(a, .link):hover {
+  text-decoration: revert;
+  color: var(--linkHoverColor);
+}
+
+.home .hero img {
+  max-width: 450px !important;
+}
+
+img.logo {
+  height: 2.2rem !important;
+}
+
+.nav-bar {
+  background-color: #30455c !important;
+}
+
+.nav-bar * {
+  color: var(--textColor) !important;
+}
+
+.nav-bar a.item:hover,
+.nav-bar a.item.active {
+  border-bottom-color: var(--accentColor);
+  color: var(--accentColor);
+}
+
+a.sidebar-link-item:hover {
+  text-decoration: revert;
+  color: var(--linkColor);
+}

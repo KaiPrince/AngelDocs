@@ -1,2 +1,3 @@
 pytest
-pycco
+git+https://github.com/KaiPrince/pycco.git
+markdownify

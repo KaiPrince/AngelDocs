@@ -1,19 +1,17 @@
 {
-  "name": "AngelDocs",
-  "version": "0.0.1",
+  "name": "angeldocs",
+  "version": "1.0.0",
   "description": "Generate beautiful and comprehensive documentation from source.",
   "main": "index.js",
-  "authors": {
-    "name": "Kai Prince",
-    "email": "kaiprince72@gmail.com"
-  },
   "repository": "https://github.com/KaiPrince/AngelDocs",
-  "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
-  },
+  "author": "Kai Prince",
   "license": "MIT",
+   "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "serve": "vitepress serve"
+  },
   "devDependencies": {
-    "vuepress": "^1.5.3"
+    "vitepress": "^0.12.2"
   }
 }
