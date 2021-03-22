@@ -1,12 +1,18 @@
 const { description } = require("../package.json");
 
 const { projects } = require("../siteConfig.json");
-const project_links = projects.map((project) => ({
-  text: project.name,
-  link: project.path,
-  target: "_blank",
-  rel: "noopener noreferrer",
+const nav_links = projects.map(({ text, link }) => ({
+  text,
+  link,
 }));
+
+const sidebar_links = projects.reduce(
+  (acc, { link, tree }) => ({
+    ...acc,
+    [link]: tree,
+  }),
+  {}
+);
 
 module.exports = {
   title: process.env.APP_TITLE || "AngelDocs",
@@ -29,7 +35,7 @@ module.exports = {
         link: "/config/",
         activeMatch: "^/config/",
       },
-      ...project_links,
+      ...nav_links,
       {
         text: "VitePress",
         link: "https://vitepress.vuejs.org",
@@ -42,6 +48,7 @@ module.exports = {
           children: [{ text: "using-vue", link: "/guide/using-vue" }],
         },
       ],
+      ...sidebar_links,
     },
   },
 };

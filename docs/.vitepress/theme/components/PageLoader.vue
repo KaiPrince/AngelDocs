@@ -1,15 +1,14 @@
 <template>
-  <p>{{ pageRoute }} {{ htmlContent }}</p>
+  <iframe
+    :src="pageRoute"
+    allowfullscreen
+    style="width: 100vh; height: 100vh"
+  />
 </template>
 <script>
 import DefaultTheme from "vitepress/theme";
 
 export default {
-  data() {
-    return {
-      htmlContent: "",
-    };
-  },
   components: { DefaultLayout: DefaultTheme.NotFound },
   computed: {
     pageRoute() {
@@ -18,19 +17,6 @@ export default {
 
       console.log("here");
       return route;
-    },
-  },
-  onMounted() {
-    this.fetchHtmlContent();
-  },
-  methods: {
-    fetchHtmlContent() {
-      console.log("fetching", this.route);
-
-      fetch(this.route).then((r) => {
-        console.log("fetched", r);
-        this.htmlContent = r;
-      });
     },
   },
 };
