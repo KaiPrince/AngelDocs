@@ -17,10 +17,12 @@ const sidebar_links = projects.reduce(
 module.exports = {
   title: process.env.APP_TITLE || "AngelDocs",
   description: description,
+  // TODO: Ensure starts with '/'
+  base: process.env.BASE_URL || "/",
 
   themeConfig: {
-    repo: "KaiPrince/AngelDocs",
-    docsDir: "docs",
+    repo: process.env.REPO || "KaiPrince/AngelDocs",
+    docsDir: process.env.DOCS_DIR || "docs",
     editLinks: true,
 
     logo: "/logo-icon.png",
