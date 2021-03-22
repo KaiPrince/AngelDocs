@@ -21,7 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # and remove the dependencies between stages.
 COPY . .
 
-RUN [ "python", "src/angel-docs/main.py" "-p", "${PROJECT_NAME:-angel-docs}", "${FILES:-**/*}"]
+RUN [ "python", "src/angel-docs/main.py", "-p", "${PROJECT_NAME:-angel-docs}", "${FILES:-**/*}"]
 
 
 # Run static site generator
