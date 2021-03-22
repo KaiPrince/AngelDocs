@@ -24,10 +24,14 @@ inputs:
     description: The name of the output folder.
     required: true
     default: dist
+  base-url:
+    description: Path from site root. ("/repo" in "a.com/repo/")
+    required: false
 runs:
   using: docker
   image: Dockerfile
   env:
     FOLDER: ${{ inputs.folder }}
+    BASE_URL: ${{ inputs.base-url }}
   args:
     - -p "${{ inputs.project-name }}" ${{ inputs.files }}
