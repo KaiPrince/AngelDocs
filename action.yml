@@ -1,20 +1,18 @@
-"""
-* Project Name: AngelDocs
-* File Name: action.yml
-* Programmer: Kai Prince
-* Date: Sun, Mar 21, 2021
-* Description: This file contains a composite github action.
-*   It will run the documentation generator on the code, then
-*   build a static site.
-"""
+# * Project Name: AngelDocs
+# * File Name: action.yml
+# * Programmer: Kai Prince
+# * Date: Sun, Mar 21, 2021
+# * Description: This file contains a composite github action.
+# *   It will run the documentation generator on the code, then
+# *   build a static site.
 
 name: AngelDocs
 description: Generate documentation and static site.
 inputs:
-  files:  # id of input
+  files: # id of input
     description: Files to process.
     required: true
-    default: '**/*'
+    default: "**/*"
   folder:
     description: Output folder for site.
     required: true
@@ -24,7 +22,7 @@ runs:
   steps:
     - uses: actions/setup-python@v2
       with:
-        python-version: '3.x'
+        python-version: "3.x"
     - uses: actions/setup-node@v1
       with:
         node-version: 14.x
@@ -43,6 +41,3 @@ runs:
       run: |
         cp -f -R . "${{ github.workspace }}/${{ inputs.folder }}"
       shell: bash
-
-
-
