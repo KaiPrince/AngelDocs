@@ -30,4 +30,4 @@ runs:
   env:
     FOLDER: ${{ inputs.folder }}
   args:
-    - -p ${{ inputs.project-name }} ${{ inputs.files }}
+    - -p "${{ inputs.project-name }}" ${{ inputs.files }}
