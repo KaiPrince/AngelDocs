@@ -8,6 +8,9 @@
 
 name: AngelDocs
 description: Generate documentation and static site.
+branding:
+  icon: "book-open"
+  color: "white"
 inputs:
   files: # id of input
     description: Files to process.
@@ -18,26 +21,8 @@ inputs:
     required: true
     default: dist
 runs:
-  using: composite
-  steps:
-    - uses: actions/setup-python@v2
-      with:
-        python-version: "3.x"
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14.x
-    - run: echo Processing ${{ inputs.files }}.
-      shell: bash
-    - name: Run doc generator
-      working-directory: ${{ github.action_path }}/src/angel-docs/
-      run: |
-        python main.py ${{ github.workspace }}/${{ inputs.files }}
-    - name: Run site generator
-      working-directory: ${{ github.action_path }}/docs/
-      run: |
-        yarn build
-    - name: Copy site to output folder
-      working-directory: ${{ github.action_path }}/docs/.vitepress/dist
-      run: |
-        cp -f -R . "${{ github.workspace }}/${{ inputs.folder }}"
-      shell: bash
+  using: docker
+  image: Dockerfile
+  env:
+    FILES: ${{ github.workspace }}/${{ inputs.files }}
+    FOLDER: ${{ github.workspace }}/${{ inputs.folder }}
