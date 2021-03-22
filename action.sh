@@ -6,6 +6,9 @@
 # * Date: Mon, Mar 22, 2021
 # * Description: This file contains a github action.
 
+# ..quit on error
+set -e
+
 # Run document generator
 python src/angel-docs/main.py "$@"
 
