@@ -15,7 +15,7 @@ inputs:
     description: Files to process.
     required: true
     default: '**/*'
-  output:
+  folder:
     description: Output folder for site.
     required: true
     default: dist
@@ -41,7 +41,7 @@ runs:
     - name: Copy site to output folder
       working-directory: ${{ github.action_path }}/docs/.vitepress/dist
       run: |
-        cp -f -R . "${{ github.workspace }}/${{ inputs.output }}"
+        cp -f -R . "${{ github.workspace }}/${{ inputs.folder }}"
       shell: bash
 
 
