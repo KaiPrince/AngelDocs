@@ -36,10 +36,9 @@ jobs:
         with:
           python-version: 3.x
       - uses: actions/cache@v2
-        working-directory: src/angel-docs/
         with:
           path: ${{ env.pythonLocation }}
-          key: ${{ env.pythonLocation }}-${{ hashFiles('requirements.txt') }}
+          key: ${{ env.pythonLocation }}-${{ hashFiles('src/angel-docs/requirements.txt') }}
       - name: Install python dependencies
         working-directory: src/angel-docs/
         run: |
