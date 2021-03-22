@@ -1,0 +1,48 @@
+"""
+* Project Name: AngelDocs
+* File Name: action.yml
+* Programmer: Kai Prince
+* Date: Sun, Mar 21, 2021
+* Description: This file contains a composite github action.
+*   It will run the documentation generator on the code, then
+*   build a static site.
+"""
+
+name: AngelDocs
+description: Generate documentation and static site.
+inputs:
+  files:  # id of input
+    description: Files to process.
+    required: true
+    default: '**/*'
+  output:
+    description: Output folder for site.
+    required: true
+    default: dist
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: echo Processing ${{ inputs.files }}.
+      shell: bash
+    - name: Run doc generator
+      working-directory: ${{ github.action_path }}/src/angel-docs/
+      run: |
+        python main.py ${{ github.workspace }}/${{ inputs.files }}
+    - name: Run site generator
+      working-directory: ${{ github.action_path }}/docs/
+      run: |
+        yarn build
+    - name: Copy site to output folder
+      working-directory: ${{ github.action_path }}/docs/.vitepress/dist
+      run: |
+        cp -f -R . "${{ github.workspace }}/${{ inputs.output }}"
+      shell: bash
+
+
+
