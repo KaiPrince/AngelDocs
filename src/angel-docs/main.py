@@ -32,11 +32,7 @@ def main():
     parser.add_argument("files", nargs="*", type=str, help="files to process")
 
     args = parser.parse_args()
-
-    # Collect matching glob file patterns
-    files = []
-    for glob_file in args.files:
-        files.extend(Path(".").glob(glob_file))
+    files = args.files
 
     project_name = str(args.output_dir)
 

@@ -12,17 +12,22 @@ branding:
   icon: "book-open"
   color: "white"
 inputs:
-  files: # id of input
-    description: Files to process.
+  project-name:
+    description: The name of your project.
     required: true
-    default: "**/*"
+    default: angel-docs
+  files:
+    description: The files to process.
+    required: true
+    default: "**/*.*"
   folder:
-    description: Output folder for site.
+    description: The name of the output folder.
     required: true
     default: dist
 runs:
   using: docker
   image: Dockerfile
   env:
-    FILES: ${{ inputs.files }}
     FOLDER: ${{ inputs.folder }}
+  args:
+    - -p ${{ inputs.project-name }} ${{ inputs.files }}
