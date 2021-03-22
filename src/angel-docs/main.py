@@ -38,19 +38,22 @@ def main():
 
     project_dir = Path(config.site_dir) / project_name
 
-    outdir = "output"
+    outdir = Path("output")
     site_config_file = Path(config.site_dir) / "siteConfig.json"
 
     # Clean output folders
-    if Path(outdir).exists():
+    if outdir.exists():
         shutil.rmtree(outdir)
+
     if project_dir.exists():
         shutil.rmtree(project_dir)
     if site_config_file.exists():
         site_config_file.unlink()
 
     # Run pycco on files
-    pycco.process(files, outdir=outdir, preserve_paths=True, skip=True, md=True)
+    pycco.process(
+        files, outdir=str(outdir.resolve()), preserve_paths=True, skip=True, md=True
+    )
 
     # Make config
     files = [
@@ -73,7 +76,7 @@ def main():
     site_config_file.write_text(json.dumps(site_config))
 
     # Create index file
-    Path(outdir).joinpath("index.md").write_text(f"# {project_name.capitalize()}")
+    (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
     shutil.copytree(outdir, project_dir)
