@@ -30,6 +30,18 @@ jobs:
       # - uses: KaiPrince/AngelDocs@v0.1
       #   with:
       #     files: src/**/*
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+      - uses: actions/cache@v2
+        with:
+          path: ${{ env.pythonLocation }}
+          key: ${{ env.pythonLocation }}-${{ hashFiles('requirements.py') }}
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then pip install -r requirements.txt --upgrade --upgrade-strategy eager; fi
       - name: Run doc generator
         working-directory: src/angel-docs/
         run: |
@@ -37,6 +49,7 @@ jobs:
       - name: Run site generator
         working-directory: docs/
         run: |
+          yarn
           yarn build
 
       - name: Deploy 🚀
