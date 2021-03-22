@@ -18,4 +18,4 @@ RUN yarn --cwd docs install --frozen-lockfile
 
 COPY action.sh /action.sh
 
-ENTRYPOINT [ "/action.sh.sh" ]
+ENTRYPOINT [ "/action.sh" ]
