@@ -44,6 +44,7 @@ def main():
     # Clean output folders
     if outdir.exists():
         shutil.rmtree(outdir)
+        outdir.mkdir()
 
     if project_dir.exists():
         shutil.rmtree(project_dir)
