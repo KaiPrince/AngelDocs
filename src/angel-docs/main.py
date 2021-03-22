@@ -50,7 +50,7 @@ def main():
         site_config_file.unlink()
 
     # Run pycco on files
-    pycco.process(files, outdir=outdir, skip=True, md=True)
+    pycco.process(files, outdir=outdir, preserve_paths=True, skip=True, md=True)
 
     # Make config
     files = [
