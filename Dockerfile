@@ -14,7 +14,6 @@
 # Run documentation generator
 FROM python:3 as documentation
 
-WORKDIR /usr/src/app
 COPY src/angel-docs/requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
@@ -22,25 +21,21 @@ RUN pip install --no-cache-dir -r requirements.txt
 # and remove the dependencies between stages.
 COPY . .
 
-WORKDIR /usr/src/app/angel-docs
-RUN [ "python", "main.py" "-p", "${PROJECT_NAME:-angel-docs}", "${FILES:-**/*}"]
+RUN [ "python", "src/angel-docs/main.py" "-p", "${PROJECT_NAME:-angel-docs}", "${FILES:-**/*}"]
 
 
 # Run static site generator
 FROM node
 
-WORKDIR /usr/src/app
-COPY --from=documentation /usr/src/app .
+COPY --from=documentation . .
 
-WORKDIR /usr/src/app/docs
-RUN yarn install --frozen-lockfile
+RUN yarn --cwd docs install --frozen-lockfile
 
-RUN [ "yarn", "build" ]
+RUN [ "yarn", "--cwd", "docs", "build" ]
 
 
 # Copy site to output folder
-WORKDIR /usr/src/app/docs/
-ENTRYPOINT [ "cp", "-f", "-R", ".vitepress/dist"]
+ENTRYPOINT [ "cp", "-f", "-R", "docs/.vitepress/dist"]
 CMD [ "${FOLDER:-dist}" ]
 VOLUME [ "${FOLDER:-dist}" ]
 
