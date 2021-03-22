@@ -7,4 +7,4 @@
 """
 from pathlib import Path
 
-site_dir = Path(__file__).root.joinpath("../../docs").resolve()
+site_dir = Path(__file__).parent.joinpath("../../docs").resolve()
