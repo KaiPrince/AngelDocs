@@ -36,24 +36,41 @@ jobs:
         with:
           python-version: 3.x
       - uses: actions/cache@v2
+        working-directory: src/angel-docs/
         with:
           path: ${{ env.pythonLocation }}
-          key: ${{ env.pythonLocation }}-${{ hashFiles('requirements.py') }}
-      - name: Install dependencies
+          key: ${{ env.pythonLocation }}-${{ hashFiles('requirements.txt') }}
+      - name: Install python dependencies
         working-directory: src/angel-docs/
         run: |
           if [ -f requirements.txt ]; then pip install -r requirements.txt --upgrade --upgrade-strategy eager; fi
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - name: Set up Node
+        uses: actions/cache@v2
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Install node dependencies
+        run: |
+          yarn install --frozen-lockfile
+
       - name: Run doc generator
         working-directory: src/angel-docs/
         run: |
           python main.py -p angel-docs **/*.py
+
       - name: Run site generator
         working-directory: docs/
         env:
           BASE_URL: /AngelDocs
           REPO: ${{ github.repository }}
         run: |
-          yarn
           yarn build
 
       - name: Deploy 🚀
