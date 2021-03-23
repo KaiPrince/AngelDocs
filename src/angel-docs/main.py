@@ -44,6 +44,7 @@ def main():
     # Clean output folders
     if outdir.exists():
         shutil.rmtree(outdir)
+    else:
         outdir.mkdir()
 
     if project_dir.exists():
@@ -62,7 +63,7 @@ def main():
             "text": file.stem,
             "link": (Path(project_name) / file.relative_to(outdir).stem).as_posix(),
         }
-        for file in Path(outdir).iterdir()
+        for file in outdir.iterdir()
     ]
     site_config = {
         "projects": [
