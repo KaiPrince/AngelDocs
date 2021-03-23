@@ -70,6 +70,13 @@ def main():
     # Run pycco on files
     pycco.process(files, outdir=str(outdir.resolve()), skip=True, md=True)
 
+    # Post-process files
+    for file in outdir.rglob("*.md"):
+        content = file.read_text()
+        if "<tab>" in content:
+            safe_content = content.replace("<tab>", "tab")
+            file.write_text(safe_content)
+
     # Make config
     files = [
         {
