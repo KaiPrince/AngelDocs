@@ -24,17 +24,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: Update latest tag
+        uses: EndBug/latest-tag@v1.4.0
 
-      - uses: KaiPrince/AngelDocs@v0.1
+      # Run our action to document our code
+      - uses: KaiPrince/AngelDocs@latest
         with:
           files: src/**/*.*
           folder: dist
           base-url: AngelDocs
 
+      # Publish to Pages
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
+
