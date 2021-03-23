@@ -25,8 +25,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - uses: actions/checkout@v2
-      - name: Update latest tag
-        uses: EndBug/latest-tag@v1.4.0
 
       # Run our action to document our code
       - uses: KaiPrince/AngelDocs@latest
@@ -42,3 +40,5 @@ jobs:
           branch: gh-pages # The branch the action should deploy to.
           folder: dist # The folder the action should deploy.
 
+      - name: Update latest tag
+        uses: EndBug/latest-tag@v1.4.0
