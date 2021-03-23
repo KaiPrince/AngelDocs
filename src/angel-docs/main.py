@@ -59,7 +59,7 @@ def main():
             "text": file.stem,
             "link": (Path(project_name) / file.relative_to(outdir).stem).as_posix(),
         }
-        for file in outdir.iterdir()
+        for file in outdir.rglob("*")
     ]
     site_config = {
         "projects": [
