@@ -25,7 +25,7 @@ inputs:
     required: true
     default: dist
   base-url:
-    description: Path from site root. ("/repo" in "a.com/repo/")
+    description: Path from site root. ("repo" in "a.com/repo/")
     required: false
 runs:
   using: docker
