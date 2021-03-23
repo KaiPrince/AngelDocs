@@ -14,7 +14,7 @@ set -e
 python src/angel-docs/main.py "$@"
 
 # Run static site builder
-yarn --cwd docs ci:build
+yarn --verbose --cwd docs ci:build
 
 
 # Copy site to output folder

@@ -45,11 +45,17 @@ def main():
     print(
         "args:",
         Path.cwd(),
+        "files:",
         files,
+        "project_name:",
         project_name,
+        "project_dir:",
         project_dir,
+        "outdir:",
         outdir,
+        "outdir_resolved:",
         str(outdir.resolve()),
+        "site_config_file:",
         site_config_file,
     )
     print("current folder:", str([x for x in Path.cwd().iterdir()]))

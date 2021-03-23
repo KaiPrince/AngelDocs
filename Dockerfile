@@ -10,15 +10,15 @@ FROM nikolaik/python-nodejs:python3.9-nodejs15
 
 
 # Set up python
-COPY src/angel-docs/requirements.txt requirements.txt
+COPY src/angel-docs/requirements.txt /requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Set up node
-COPY docs/package.json docs/package.json
-COPY docs/yarn.lock docs/yarn.lock
-RUN yarn --cwd docs install --frozen-lockfile
+COPY docs/package.json /package.json
+COPY docs/yarn.lock /yarn.lock
+RUN yarn --cwd / --modules-folder /app/node_modules install --frozen-lockfile
 
-COPY . .
+COPY . /app
 COPY action.sh /action.sh
 RUN chmod +x /action.sh
 
