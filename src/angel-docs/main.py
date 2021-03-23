@@ -34,7 +34,7 @@ def main():
     args = parser.parse_args()
     files = args.files
 
-    project_name = str(args.output_dir)
+    project_name = str(args.output_dir).strip("\"'")
 
     project_dir = Path(config.site_dir) / project_name
 
