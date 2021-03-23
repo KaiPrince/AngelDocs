@@ -14,12 +14,16 @@ const sidebar_links = projects.reduce(
   {}
 );
 
+// Left-pad with '/'
+const baseUrl =
+  process.env.BASE_URL && String(process.env.BASE_URL).startsWith("/")
+    ? process.env.BASE_URL
+    : `/${process.env.BASE_URL}`;
+
 module.exports = {
   title: process.env.APP_TITLE || "AngelDocs",
   description: description,
-  // TODO: Ensure starts with '/'
-  base: process.env.BASE_URL || "/",
-
+  base: baseUrl || "/",
   themeConfig: {
     repo: process.env.REPO || "KaiPrince/AngelDocs",
     docsDir: process.env.DOCS_DIR || "docs",

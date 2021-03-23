@@ -30,31 +30,28 @@ def main():
         help="The name of the project page for these files.",
     )
     parser.add_argument("files", nargs="*", type=str, help="files to process")
-
     args = parser.parse_args()
 
-    # Collect matching glob file patterns
-    files = []
-    for glob_file in args.files:
-        files.extend(Path(".").glob(glob_file))
-
-    project_name = str(args.output_dir)
-
+    # Get job vars.
+    files = args.files
+    project_name = str(args.output_dir).strip("\"'")
     project_dir = Path(config.site_dir) / project_name
-
-    outdir = "output"
     site_config_file = Path(config.site_dir) / "siteConfig.json"
+    outdir = config.outdir
 
     # Clean output folders
-    if Path(outdir).exists():
+    if outdir.exists():
         shutil.rmtree(outdir)
+    else:
+        outdir.mkdir()
+
     if project_dir.exists():
         shutil.rmtree(project_dir)
     if site_config_file.exists():
         site_config_file.unlink()
 
     # Run pycco on files
-    pycco.process(files, outdir=outdir, skip=True, md=True)
+    pycco.process(files, outdir=str(outdir.resolve()), skip=True, md=True)
 
     # Make config
     files = [
@@ -62,7 +59,7 @@ def main():
             "text": file.stem,
             "link": (Path(project_name) / file.relative_to(outdir).stem).as_posix(),
         }
-        for file in Path(outdir).iterdir()
+        for file in outdir.iterdir()
     ]
     site_config = {
         "projects": [
@@ -77,7 +74,7 @@ def main():
     site_config_file.write_text(json.dumps(site_config))
 
     # Create index file
-    Path(outdir).joinpath("index.md").write_text(f"# {project_name.capitalize()}")
+    (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
     shutil.copytree(outdir, project_dir)
