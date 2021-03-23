@@ -13,8 +13,9 @@ set -e
 # Run document generator
 python /app/src/angel-docs/main.py $@
 
+tree /app #TEMP
+
 # Run static site builder
-yarn --cwd /app install --frozen-lockfile # TEMP
 yarn --cwd /app build
 
 
