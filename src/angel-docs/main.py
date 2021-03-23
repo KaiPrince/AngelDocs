@@ -15,6 +15,14 @@ from markdownify import markdownify
 import config
 
 
+# Warning: The source path will be appended to the output directory.
+#   It is best to run the program from the expected base directory.
+#   e.g.:
+#   * "." at project/src produces output/file1.md (good)
+#   * "src" at project produces output/src/file1.md (good)
+#   * BUT "../src" at project/other produces output/../src/file1.md (bad)
+
+
 def main():
     """ This is the entrypoint for the application. """
 
@@ -32,8 +40,16 @@ def main():
     parser.add_argument("files", nargs="*", type=str, help="files to process")
     args = parser.parse_args()
 
-    # Get job vars.
-    files = args.files
+    # Resolve file globs
+    files = []
+    for raw_source in args.files:
+        for file_or_dir in Path(".").glob(raw_source):
+            if file_or_dir.is_dir():
+                files.extend([file for file in file_or_dir.rglob("*.*")])
+            else:
+                files.append(file_or_dir)
+
+    # Get job paths.
     project_name = str(args.output_dir).strip("\"'")
     project_dir = Path(config.site_dir) / project_name
     site_config_file = Path(config.site_dir) / "siteConfig.json"
