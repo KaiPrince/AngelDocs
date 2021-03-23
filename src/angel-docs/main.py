@@ -30,35 +30,14 @@ def main():
         help="The name of the project page for these files.",
     )
     parser.add_argument("files", nargs="*", type=str, help="files to process")
-
     args = parser.parse_args()
+
+    # Get job vars.
     files = args.files
-
     project_name = str(args.output_dir).strip("\"'")
-
     project_dir = Path(config.site_dir) / project_name
-
-    outdir = Path("output")
     site_config_file = Path(config.site_dir) / "siteConfig.json"
-
-    # TEMP
-    print(
-        "args:",
-        Path.cwd(),
-        "files:",
-        files,
-        "project_name:",
-        project_name,
-        "project_dir:",
-        project_dir,
-        "outdir:",
-        outdir,
-        "outdir_resolved:",
-        str(outdir.resolve()),
-        "site_config_file:",
-        site_config_file,
-    )
-    print("current folder:", str([x for x in Path.cwd().iterdir()]))
+    outdir = config.outdir
 
     # Clean output folders
     if outdir.exists():
