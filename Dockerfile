@@ -6,16 +6,19 @@
 # *   It will run the documentation generator, then the static site generator.
 
 
-FROM nikolaik/python-nodejs:latest
+FROM nikolaik/python-nodejs:python3.9-nodejs15
 
-COPY . .
 
 # Set up python
-RUN pip install --no-cache-dir -r src/angel-docs/requirements.txt
+COPY src/angel-docs/requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Set up node
+COPY docs/package.json docs/package.json
+COPY docs/yarn.lock docs/yarn.lock
 RUN yarn --cwd docs install --frozen-lockfile
 
+COPY . .
 COPY action.sh /action.sh
 RUN chmod +x /action.sh
 
