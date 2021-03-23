@@ -11,11 +11,11 @@ set -e
 
 
 # Run document generator
-python src/angel-docs/main.py "$@"
+python /app/src/angel-docs/main.py "$@"
 
 # Run static site builder
-yarn --verbose --cwd docs ci:build
+yarn --verbose --cwd /app ci:build
 
 
 # Copy site to output folder
-cp -f -R docs/.vitepress/dist $FOLDER
+cp -f -R /app/docs/.vitepress/dist $FOLDER
