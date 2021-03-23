@@ -15,6 +15,14 @@ from markdownify import markdownify
 import config
 
 
+# Warning: The source path will be appended to the output directory.
+#   It is best to run the program from the expected base directory.
+#   e.g.:
+#   * "." at project/src produces output/file1.md (good)
+#   * "src" at project produces output/src/file1.md (good)
+#   * BUT "../src" at project/other produces output/../src/file1.md (bad)
+
+
 def main():
     """ This is the entrypoint for the application. """
 
@@ -32,8 +40,16 @@ def main():
     parser.add_argument("files", nargs="*", type=str, help="files to process")
     args = parser.parse_args()
 
-    # Get job vars.
-    files = args.files
+    # Resolve file globs
+    files = []
+    for raw_source in args.files:
+        for file_or_dir in Path(".").glob(raw_source):
+            if file_or_dir.is_dir():
+                files.extend([file for file in file_or_dir.rglob("*.*")])
+            else:
+                files.append(file_or_dir)
+
+    # Get job paths.
     project_name = str(args.output_dir).strip("\"'")
     project_dir = Path(config.site_dir) / project_name
     site_config_file = Path(config.site_dir) / "siteConfig.json"
@@ -42,16 +58,24 @@ def main():
     # Clean output folders
     if outdir.exists():
         shutil.rmtree(outdir)
-    else:
-        outdir.mkdir()
+    outdir.mkdir()
 
     if project_dir.exists():
         shutil.rmtree(project_dir)
+    project_dir.mkdir()
+
     if site_config_file.exists():
         site_config_file.unlink()
 
     # Run pycco on files
     pycco.process(files, outdir=str(outdir.resolve()), skip=True, md=True)
+
+    # Post-process files
+    for file in outdir.rglob("*.md"):
+        content = file.read_text()
+        if "<tab>" in content:
+            safe_content = content.replace("<tab>", "tab")
+            file.write_text(safe_content)
 
     # Make config
     files = [
@@ -59,7 +83,7 @@ def main():
             "text": file.stem,
             "link": (Path(project_name) / file.relative_to(outdir).stem).as_posix(),
         }
-        for file in outdir.iterdir()
+        for file in outdir.rglob("*.*")
     ]
     site_config = {
         "projects": [
@@ -77,7 +101,9 @@ def main():
     (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
-    shutil.copytree(outdir, project_dir)
+    # shutil.copytree(outdir, project_dir)
+    for file in outdir.rglob("*.*"):
+        file.replace(project_dir / (file.name))
 
     print("Done.")
 

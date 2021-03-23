@@ -15,10 +15,11 @@ const sidebar_links = projects.reduce(
 );
 
 // Left-pad with '/'
-const baseUrl =
-  process.env.BASE_URL && String(process.env.BASE_URL).startsWith("/")
+const baseUrl = process.env.BASE_URL
+  ? String(process.env.BASE_URL).startsWith("/")
     ? process.env.BASE_URL
-    : `/${process.env.BASE_URL}`;
+    : `/${process.env.BASE_URL}`
+  : null;
 
 module.exports = {
   title: process.env.APP_TITLE || "AngelDocs",
