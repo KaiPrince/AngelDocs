@@ -1,12 +1,12 @@
 const { description } = require("../package.json");
 
 const { projects } = require("../siteConfig.json");
-const nav_links = projects.map(({ text, link }) => ({
+const navLinks = projects.map(({ text, link }) => ({
   text,
   link,
 }));
 
-const sidebar_links = projects.reduce(
+const sidebarLinks = projects.reduce(
   (acc, { link, tree }) => ({
     ...acc,
     [link]: tree,
@@ -42,7 +42,7 @@ module.exports = {
         link: "/config/",
         activeMatch: "^/config/",
       },
-      ...nav_links,
+      ...navLinks,
       {
         text: "VitePress",
         link: "https://vitepress.vuejs.org",
@@ -52,10 +52,21 @@ module.exports = {
       "/guide/": [
         {
           text: "Guide",
-          children: [{ text: "using-vue", link: "/guide/using-vue" }],
+          children: [
+            { text: "Introduction", link: "/guide/" },
+            { text: "Using AngelDocs", link: "/guide/using-angel-docs" },
+          ],
         },
+        ...navLinks.map((navLink) => ({
+          ...navLink,
+          collapsable: true,
+          children: Object.keys(sidebarLinks).reduce(
+            (acc, x) => [...acc, ...sidebarLinks[x]],
+            []
+          ),
+        })),
       ],
-      ...sidebar_links,
+      ...sidebarLinks,
     },
   },
 };
