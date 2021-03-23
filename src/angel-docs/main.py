@@ -42,11 +42,12 @@ def main():
     # Clean output folders
     if outdir.exists():
         shutil.rmtree(outdir)
-    else:
-        outdir.mkdir()
+    outdir.mkdir()
 
     if project_dir.exists():
         shutil.rmtree(project_dir)
+    project_dir.mkdir()
+
     if site_config_file.exists():
         site_config_file.unlink()
 
@@ -59,7 +60,7 @@ def main():
             "text": file.stem,
             "link": (Path(project_name) / file.relative_to(outdir).stem).as_posix(),
         }
-        for file in outdir.rglob("*")
+        for file in outdir.rglob("*.*")
     ]
     site_config = {
         "projects": [
@@ -77,7 +78,9 @@ def main():
     (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
-    shutil.copytree(outdir, project_dir)
+    # shutil.copytree(outdir, project_dir)
+    for file in outdir.rglob("*.*"):
+        file.replace(project_dir / (file.name))
 
     print("Done.")
 
