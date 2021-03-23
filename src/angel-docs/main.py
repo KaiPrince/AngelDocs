@@ -41,6 +41,19 @@ def main():
     outdir = Path("output")
     site_config_file = Path(config.site_dir) / "siteConfig.json"
 
+    # TEMP
+    print(
+        "args:",
+        Path.cwd(),
+        files,
+        project_name,
+        project_dir,
+        outdir,
+        str(outdir.resolve()),
+        site_config_file,
+    )
+    print("current folder:", str([x for x in Path.cwd().iterdir()]))
+
     # Clean output folders
     if outdir.exists():
         shutil.rmtree(outdir)
