@@ -1,1 +1,0 @@
-import{o as t,c as e}from"./app.d568bd12.js";const r='{"title":"","description":"","frontmatter":{},"relativePath":"angel-docs/src/angel-docs/Readme.md","lastUpdated":1616474043864}',a={};a.render=function(r,a,d,o,n,s){return t(),e("div")};export default a;export{r as __pageData};
