@@ -13,7 +13,7 @@ set -e
 # Run document generator
 python /app/src/angel-docs/main.py $@
 
-tree /app #TEMP
+ls -a -R /app #TEMP
 
 # Run static site builder
 yarn --cwd /app build
