@@ -13,10 +13,8 @@ set -e
 # Run document generator
 python /app/src/angel-docs/main.py $@
 
-cat /app/docs/siteConfig.json # temp
-
 # Run static site builder
-yarn --cwd /app build
+yarn --cwd /app/docs build
 
 
 # Copy site to output folder
