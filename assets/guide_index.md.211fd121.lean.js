@@ -1,0 +1,1 @@
+import{o as e,c as t,d as r}from"./app.f2e537d1.js";const a='{"title":"Introduction","description":"","frontmatter":{},"relativePath":"guide/index.md","lastUpdated":1616475647000}',n={},o=r('',3);n.render=function(r,a,n,s,i,d){return e(),t("div",null,[o])};export default n;export{a as __pageData};
