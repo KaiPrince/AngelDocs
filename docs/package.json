@@ -6,9 +6,6 @@
   "repository": "https://github.com/KaiPrince/AngelDocs",
   "author": "Kai Prince",
   "license": "MIT",
-  "engines": {
-    "node": "^15.12.0"
-  },
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
