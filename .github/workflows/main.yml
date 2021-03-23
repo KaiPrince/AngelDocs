@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - uses: EndBug/latest-tag@v1.4.0
 
   # This workflow contains a single job called "build"
