@@ -11,7 +11,7 @@ set -e
 
 
 # Run document generator
-python /app/src/angel-docs/main.py "$@"
+python /app/src/angel-docs/main.py $@
 
 # Run static site builder
 yarn --verbose --cwd /app ci:build
