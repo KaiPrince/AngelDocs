@@ -31,6 +31,7 @@ jobs:
         with:
           files: src/**/*.*
           folder: dist
+          base-url: AngelDocs
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
