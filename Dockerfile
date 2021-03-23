@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Set up node
 COPY docs/package.json /package.json
 COPY docs/yarn.lock /yarn.lock
-RUN yarn --cwd / --modules-folder /app/node_modules install --frozen-lockfile
+RUN yarn --cwd / --modules-folder /app/docs/node_modules install --frozen-lockfile
 
 COPY . /app
 COPY action.sh /action.sh
