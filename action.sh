@@ -9,6 +9,9 @@
 # ..quit on error
 set -e
 
+# ..increase memory limit
+export NODE_OPTIONS="--max_old_space_size=4096"
+
 
 # Run document generator
 python /app/src/angel-docs/main.py $@
