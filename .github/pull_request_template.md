@@ -20,6 +20,6 @@ None.
 
 - [ ] No new warnings are introduced
 - [ ] Comments and documentation have been updated
-- [ ] No unresolved todo comments (They should be created as a new issue instead.)
+- [ ] TODOs resolved or added to issue tracker
 - [ ] No commented-out code
 - [ ] This isn't a 'quick-and-dirty' job
