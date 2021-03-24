@@ -110,9 +110,14 @@ def make_site_config(project_name: str, outdir: Path, output_files: List[Path]):
     for file in output_files:
         file_path = Path(file)
 
+        text = Path(file).stem
+        link = (
+            Path(project_name) / file_path.relative_to(outdir).with_suffix("")
+        ).as_posix()
+
         tree = {
-            "text": Path(file).stem,
-            "link": f"/{(Path(project_name) / file_path.relative_to(outdir)).as_posix()}",
+            "text": text,
+            "link": f"/{link}",
         }
 
         files.append(tree)

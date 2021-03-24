@@ -148,20 +148,20 @@ def test_sidebar_links():
                 "text": f"{project_name.capitalize()}",
                 "link": f"/{project_name}/",
                 "children": [
-                    {"text": "setup", "link": f"/{project_name}/setup.md"},
+                    {"text": "setup", "link": f"/{project_name}/setup"},
                     {
                         "text": "__init__",
-                        "link": f"/{project_name}/module/__init__.md",
+                        "link": f"/{project_name}/module/__init__",
                     },
-                    {"text": "file", "link": f"/{project_name}/module/file.md"},
+                    {"text": "file", "link": f"/{project_name}/module/file"},
                     # {
                     #     "text": "module",
                     #     "children": [
                     #         {
                     #             "text": "__init__",
-                    #             "link": f"/{project_name}/module/__init__.md",
+                    #             "link": f"/{project_name}/module/__init__",
                     #         },
-                    #         {"text": "file", "link": f"/{project_name}/module/file.md"},
+                    #         {"text": "file", "link": f"/{project_name}/module/file"},
                     #     ],
                     # },
                 ],
