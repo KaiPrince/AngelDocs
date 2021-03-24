@@ -7,9 +7,9 @@ const navLinks = projects.map(({ text, link }) => ({
 }));
 
 const sidebarLinks = projects.reduce(
-  (acc, { link, children }) => ({
+  (acc, { text, link, children }) => ({
     ...acc,
-    [link]: children,
+    [link]: [{ text, children }],
   }),
   {}
 );
@@ -57,14 +57,7 @@ module.exports = {
             { text: "Using AngelDocs", link: "/guide/using-angel-docs" },
           ],
         },
-        ...navLinks.map((navLink) => ({
-          ...navLink,
-          collapsable: true,
-          children: Object.keys(sidebarLinks).reduce(
-            (acc, x) => [...acc, ...sidebarLinks[x]],
-            []
-          ),
-        })),
+        ...navLinks,
       ],
       ...sidebarLinks,
     },
