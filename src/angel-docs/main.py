@@ -51,7 +51,6 @@ def main():
 
     clean_output_folders(project_dir, site_config_file, outdir)
     outdir.mkdir()
-    project_dir.mkdir()
 
     build_docs(raw_sources, outdir)
 
@@ -63,8 +62,7 @@ def main():
     (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
-    for file in outdir.rglob("*.*"):
-        file.replace(project_dir / (file.name))
+    shutil.copytree(outdir, project_dir)
 
     print("Done.")
 
