@@ -11,7 +11,6 @@ from pathlib import Path
 import json
 from typing import List
 import pycco
-from markdownify import markdownify
 
 import config
 
@@ -68,10 +67,11 @@ def main():
     print("Done.")
 
 
-def build_docs(raw_sources, outdir):
+def build_docs(raw_sources: List[str], raw_outdir: str):
     files = resolve_file_sources(raw_sources)
+    outdir = Path(raw_outdir).resolve()
     # Run pycco on files
-    pycco.process(files, outdir=str(outdir.resolve()), skip=True, md=True)
+    pycco.process(files, outdir=str(outdir), skip=True, md=True)
     # Post-process files
     for file in outdir.rglob("*.md"):
         content = file.read_text()
@@ -119,6 +119,8 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
 
     files = []
     for raw_source in raw_sources:
+        if Path(raw_source).is_absolute():
+            raw_source = str(Path(raw_source).relative_to(Path.cwd()))
         for file_or_dir in Path.cwd().glob(raw_source):
             if file_or_dir.is_dir():
                 files.extend(
