@@ -49,8 +49,7 @@ def main():
     site_config_file = Path(config.site_dir) / "siteConfig.json"
     outdir = config.outdir
 
-    clean_output_folders(project_dir, site_config_file, outdir)
-    outdir.mkdir()
+    # clean_output_folders(project_dir, site_config_file, outdir)
 
     build_docs(raw_sources, outdir)
 
@@ -62,7 +61,7 @@ def main():
     (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
-    shutil.copytree(outdir, project_dir)
+    shutil.copytree(outdir, project_dir, dirs_exist_ok=True)
 
     print("Done.")
 
