@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 import shutil
 import pytest
-from main import build_docs
+from main import build_docs, make_site_config
 
 
 @pytest.fixture(autouse=True)
@@ -132,4 +132,47 @@ def test_folder_nesting_absolute_path(
 
 def test_sidebar_links():
     """ Generates the sidebar config that maps to the output folder structure. """
-    pass
+
+    # Arrange
+    project_name = "project"
+    output_dir = "output"
+    output_files = [
+        f"{output_dir}/setup.md",
+        f"{output_dir}/module/__init__.md",
+        f"{output_dir}/module/file.md",
+    ]
+    original = {}
+    expected = {
+        "projects": [
+            {
+                "text": f"{project_name.capitalize()}",
+                "link": f"/{project_name}/",
+                "children": [
+                    {"text": "setup", "link": f"/{project_name}/setup.md"},
+                    {
+                        "text": "__init__",
+                        "link": f"/{project_name}/module/__init__.md",
+                    },
+                    {"text": "file", "link": f"/{project_name}/module/file.md"},
+                    # {
+                    #     "text": "module",
+                    #     "children": [
+                    #         {
+                    #             "text": "__init__",
+                    #             "link": f"/{project_name}/module/__init__.md",
+                    #         },
+                    #         {"text": "file", "link": f"/{project_name}/module/file.md"},
+                    #     ],
+                    # },
+                ],
+            }
+        ]
+    }
+
+    # Act
+    config = make_site_config(
+        project_name, Path(output_dir), [Path(x) for x in output_files]
+    )
+
+    # Assert
+    assert config == expected

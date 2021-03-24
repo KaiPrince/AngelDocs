@@ -50,11 +50,13 @@ def main():
     outdir = config.outdir
 
     clean_output_folders(project_dir, site_config_file, outdir)
+    outdir.mkdir()
+    project_dir.mkdir()
 
     build_docs(raw_sources, outdir)
 
     # Write config file for static site generator.
-    site_config = make_site_config(project_name, outdir)
+    site_config = make_site_config(project_name, outdir, outdir.rglob("*.*"))
     site_config_file.write_text(json.dumps(site_config))
 
     # Create index file
@@ -80,39 +82,6 @@ def build_docs(raw_sources: List[str], raw_outdir: str):
             file.write_text(safe_content)
 
 
-def make_site_config(project_name, outdir):
-    files = [
-        {
-            "text": file.stem,
-            "link": (Path(project_name) / file.relative_to(outdir).stem).as_posix(),
-        }
-        for file in outdir.rglob("*.*")
-    ]
-    site_config = {
-        "projects": [
-            {
-                "text": f"{project_name.capitalize()}",
-                "link": f"/{project_name}/",
-                "tree": files,
-            }
-        ]
-    }
-    return site_config
-
-
-def clean_output_folders(project_dir, site_config_file, outdir):
-    """ Remove all files present in our output folders. """
-
-    if outdir.exists():
-        shutil.rmtree(outdir)
-    outdir.mkdir()
-    if project_dir.exists():
-        shutil.rmtree(project_dir)
-    project_dir.mkdir()
-    if site_config_file.exists():
-        site_config_file.unlink()
-
-
 def resolve_file_sources(raw_sources: List[str]) -> List[str]:
     """Consumes a list of file path strings or glob strings and produces a list
     of file path strings."""
@@ -132,6 +101,45 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
             else:
                 files.append(str(file_or_dir.relative_to(Path.cwd())))
     return files
+
+
+def make_site_config(project_name: str, outdir: Path, output_files: List[Path]):
+    # LinkItem = Dict[str, str]
+    # LinkGroup = Dict[str, Union[str, LinkItem, "LinkGroup"]]
+    # LinkTree = List[LinkGroup]
+
+    files = []
+    for file in output_files:
+        file_path = Path(file)
+
+        tree = {
+            "text": Path(file).stem,
+            "link": f"/{(Path(project_name) / file_path.relative_to(outdir)).as_posix()}",
+        }
+
+        files.append(tree)
+
+    site_config = {
+        "projects": [
+            {
+                "text": f"{project_name.capitalize()}",
+                "link": f"/{project_name}/",
+                "children": files,
+            }
+        ]
+    }
+    return site_config
+
+
+def clean_output_folders(project_dir, site_config_file, outdir):
+    """ Remove all files present in our output folders. """
+
+    if outdir.exists():
+        shutil.rmtree(outdir)
+    if project_dir.exists():
+        shutil.rmtree(project_dir)
+    if site_config_file.exists():
+        site_config_file.unlink()
 
 
 if __name__ == "__main__":
