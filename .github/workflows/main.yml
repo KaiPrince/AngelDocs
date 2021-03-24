@@ -39,7 +39,7 @@ jobs:
       # Run our action to document our code
       - uses: KaiPrince/AngelDocs@latest
         with:
-          files: src
+          files: src/**/*.py
           folder: dist
           base-url: AngelDocs
 
