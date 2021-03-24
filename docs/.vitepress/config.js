@@ -7,9 +7,9 @@ const navLinks = projects.map(({ text, link }) => ({
 }));
 
 const sidebarLinks = projects.reduce(
-  (acc, { link, tree }) => ({
+  (acc, { link, children }) => ({
     ...acc,
-    [link]: tree,
+    [link]: children,
   }),
   {}
 );
