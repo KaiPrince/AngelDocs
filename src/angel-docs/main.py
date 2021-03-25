@@ -9,8 +9,10 @@ import shutil
 import argparse
 from pathlib import Path
 import json
-from typing import List
+from typing import Dict, List, Union
 import pycco
+from collections import defaultdict
+import itertools
 
 import config
 
@@ -99,32 +101,72 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
 
 
 def make_site_config(project_name: str, outdir: Path, output_files: List[Path]):
-    # LinkItem = Dict[str, str]
-    # LinkGroup = Dict[str, Union[str, LinkItem, "LinkGroup"]]
-    # LinkTree = List[LinkGroup]
+    LinkItem = Dict[str, str]
+    LinkGroup = Dict[str, Union[str, LinkItem]]
+    LinkTree = List[LinkGroup]
 
-    files = []
+    FILE_MARKER = "<files>"
+
+    def attach(branch, trunk):
+        """
+        Insert a branch of directories on its trunk.
+        """
+        parts = branch.split("/", 1)
+        if len(parts) == 1:  # branch is a file
+            trunk[FILE_MARKER].append(parts[0])
+        else:
+            node, others = parts
+            if node not in trunk:
+                trunk[node] = defaultdict(dict, ((FILE_MARKER, []),))
+            attach(others, trunk[node])
+
+    # Construct file tree
+    files: LinkTree = []
+    main_dict = defaultdict(dict, ((FILE_MARKER, []),))
     for file in output_files:
         file_path = Path(file)
 
-        text = Path(file).stem
         link = (
             Path(project_name) / file_path.relative_to(outdir).with_suffix("")
         ).as_posix()
 
-        tree = {
-            "text": text,
-            "link": f"/{link}",
-        }
+        attach(link, main_dict)
 
-        files.append(tree)
+    # Convert file tree to config tree
+    def make_config_tree(node, path=""):
+        if isinstance(node, list):
+            leaf = [
+                {
+                    "text": file,
+                    "link": f"{path.removesuffix(FILE_MARKER)}{file}",
+                }
+                for file in node
+            ]
+            return leaf
+        elif isinstance(node, dict):
+            children = []
+            for key, value in node.items():
+                child_node_node = make_config_tree(value, f"{path}/{key}")
+                if isinstance(child_node_node, list):
+                    children.extend(child_node_node)
+                else:
+                    children.append(child_node_node)
+            child_node = {
+                "text": Path(path).stem,
+                "children": children,
+            }
+            return child_node
+        else:
+            raise ValueError("Corrupt file tree", node)
+
+    config_tree = make_config_tree(main_dict["project"], "/project")
 
     site_config = {
         "projects": [
             {
                 "text": f"{project_name.capitalize()}",
                 "link": f"/{project_name}/",
-                "children": files,
+                "children": config_tree["children"],
             }
         ]
     }

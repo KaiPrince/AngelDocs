@@ -150,20 +150,15 @@ def test_sidebar_links():
                 "children": [
                     {"text": "setup", "link": f"/{project_name}/setup"},
                     {
-                        "text": "__init__",
-                        "link": f"/{project_name}/module/__init__",
+                        "text": "module",
+                        "children": [
+                            {
+                                "text": "__init__",
+                                "link": f"/{project_name}/module/__init__",
+                            },
+                            {"text": "file", "link": f"/{project_name}/module/file"},
+                        ],
                     },
-                    {"text": "file", "link": f"/{project_name}/module/file"},
-                    # {
-                    #     "text": "module",
-                    #     "children": [
-                    #         {
-                    #             "text": "__init__",
-                    #             "link": f"/{project_name}/module/__init__",
-                    #         },
-                    #         {"text": "file", "link": f"/{project_name}/module/file"},
-                    #     ],
-                    # },
                 ],
             }
         ]
