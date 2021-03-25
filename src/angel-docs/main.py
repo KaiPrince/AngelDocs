@@ -39,15 +39,13 @@ def main():
     )
     parser.add_argument("files", nargs="*", type=str, help="files to process")
     args = parser.parse_args()
-    # TODO remove this comment by renaming the variable
-    # ..sources are file paths that may include globs and may be relative.
     raw_sources = args.files
 
     # Get job paths.
     project_name = str(args.output_dir).strip("\"'")
-    project_dir = Path(config.site_dir) / project_name
-    site_config_file = Path(config.site_dir) / "siteConfig.json"
-    outdir = config.outdir
+    project_dir = Path(config.documents_path) / project_name
+    site_config_file = Path(config.documents_path) / "siteConfig.json"
+    outdir = config.build_path
 
     # clean_output_folders(project_dir, site_config_file, outdir)
 

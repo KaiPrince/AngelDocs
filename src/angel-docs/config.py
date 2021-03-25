@@ -7,5 +7,6 @@
 """
 from pathlib import Path
 
-site_dir = Path(__file__).parent.joinpath("../../docs").resolve()
-outdir = Path(__file__).parent.joinpath("output").resolve()
+
+documents_path = Path(__file__).parent.joinpath("../../docs").resolve()
+build_path = Path(__file__).parent.joinpath("output").resolve()
