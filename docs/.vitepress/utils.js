@@ -18,7 +18,10 @@ const makeSidebarLinks = (globPattern = `${PROJECTS_DIR}/**/*.md`) => {
   const projects = allFiles.reduce((acc, file) => {
     const project = file.split("/")[2];
     const projectLink = `/${file.split("/")[1]}/${project}/`;
-    const fileName = file.slice(file.lastIndexOf("/"), file.lastIndexOf("."));
+    const fileName = file.slice(
+      file.lastIndexOf("/") + 1,
+      file.lastIndexOf(".")
+    );
     const fileLink = file.slice(0, file.lastIndexOf("."));
 
     const result = {

@@ -19,10 +19,10 @@ describe("Navigation bar links", () => {
     // Generates the sidebar config that maps to the output folder structure.
 
     // Arrange
-    const expected = [{ link: "/project/", text: "Project" }];
+    const expected = [{ link: "/projects/project/", text: "Project" }];
 
     // Act
-    const links = makeNavLinks(`*`);
+    const links = makeNavLinks();
 
     // Assert
     expect(links).toStrictEqual(expected);
@@ -30,38 +30,27 @@ describe("Navigation bar links", () => {
 });
 
 describe("Side bar links", () => {
-  it("generate links", () => {
-    // Arrange
-    const projectName = "project";
-    const expected = {
-      "/project/": [{ text: "Project", children: [`/${projectName}/setup`] }],
-    };
-
-    // Act
-    const links = makeSidebarLinks(`${projectName}/*.md`);
-
-    // Assert
-    expect(links).toStrictEqual(expected);
-  });
-
   it("generates nested links", () => {
     // Arrange
     const projectName = "project";
     const expected = {
-      [`/${projectName}/`]: [
+      [`/projects/${projectName}/`]: [
         {
           text: _.capitalize(`${projectName}`),
           children: [
-            `/${projectName}/module/__init__`,
-            `/${projectName}/module/file`,
-            `/${projectName}/setup`,
+            {
+              text: "__init__",
+              link: `/projects/${projectName}/module/__init__`,
+            },
+            { text: "file", link: `/projects/${projectName}/module/file` },
+            { text: "setup", link: `/projects/${projectName}/setup` },
           ],
         },
       ],
     };
 
     // Act
-    const links = makeSidebarLinks(`${projectName}/**/*.md`);
+    const links = makeSidebarLinks();
 
     // Assert
     expect(links).toStrictEqual(expected);
