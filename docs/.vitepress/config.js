@@ -1,18 +1,5 @@
 const { description } = require("../package.json");
-
-const { projects } = require("../siteConfig.json");
-const navLinks = projects.map(({ text, link }) => ({
-  text,
-  link,
-}));
-
-const sidebarLinks = projects.reduce(
-  (acc, { text, link, children }) => ({
-    ...acc,
-    [link]: [{ text, children }],
-  }),
-  {}
-);
+const { makeNavLinks, makeSidebarLinks } = require("./utils");
 
 // Left-pad with '/'
 const baseUrl = process.env.BASE_URL
@@ -37,12 +24,7 @@ module.exports = {
         link: "/guide/",
         activeMatch: "^/guide/",
       },
-      {
-        text: "Config",
-        link: "/config/",
-        activeMatch: "^/config/",
-      },
-      ...navLinks,
+      ...makeNavLinks(),
       {
         text: "VitePress",
         link: "https://vitepress.vuejs.org",
@@ -57,9 +39,8 @@ module.exports = {
             { text: "Using AngelDocs", link: "/guide/using-angel-docs" },
           ],
         },
-        ...navLinks,
       ],
-      ...sidebarLinks,
+      ...makeSidebarLinks(),
     },
   },
 };

@@ -46,16 +46,11 @@ def main():
     # Get job paths.
     project_name = str(args.output_dir).strip("\"'")
     project_dir = Path(config.documents_path) / project_name
-    site_config_file = Path(config.documents_path) / "siteConfig.json"
     outdir = config.build_path
 
-    # clean_output_folders(project_dir, site_config_file, outdir)
+    clean_output_folder(outdir)
 
     build_docs(raw_sources, outdir)
-
-    # Write config file for static site generator.
-    site_config = make_site_config(project_name, outdir, outdir.rglob("*.*"))
-    site_config_file.write_text(json.dumps(site_config))
 
     # Create index file
     (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
@@ -100,88 +95,11 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
     return files
 
 
-def make_site_config(project_name: str, outdir: Path, output_files: List[Path]):
-    LinkItem = Dict[str, str]
-    LinkGroup = Dict[str, Union[str, LinkItem]]
-    LinkTree = List[LinkGroup]
-
-    FILE_MARKER = "<files>"
-
-    def attach(branch, trunk):
-        """
-        Insert a branch of directories on its trunk.
-        """
-        parts = branch.split("/", 1)
-        if len(parts) == 1:  # branch is a file
-            trunk[FILE_MARKER].append(parts[0])
-        else:
-            node, others = parts
-            if node not in trunk:
-                trunk[node] = defaultdict(dict, ((FILE_MARKER, []),))
-            attach(others, trunk[node])
-
-    # Construct file tree
-    files: LinkTree = []
-    main_dict = defaultdict(dict, ((FILE_MARKER, []),))
-    for file in output_files:
-        file_path = Path(file)
-
-        link = (
-            Path(project_name) / file_path.relative_to(outdir).with_suffix("")
-        ).as_posix()
-
-        attach(link, main_dict)
-
-    # Convert file tree to config tree
-    def make_config_tree(node, path=""):
-        if isinstance(node, list):
-            leaf = [
-                {
-                    "text": file,
-                    "link": f"{path.removesuffix(FILE_MARKER)}{file}",
-                }
-                for file in node
-            ]
-            return leaf
-        elif isinstance(node, dict):
-            children = []
-            for key, value in node.items():
-                child_node_node = make_config_tree(value, f"{path}/{key}")
-                if isinstance(child_node_node, list):
-                    children.extend(child_node_node)
-                else:
-                    children.append(child_node_node)
-            child_node = {
-                "text": Path(path).stem,
-                "children": children,
-            }
-            return child_node
-        else:
-            raise ValueError("Corrupt file tree", node)
-
-    config_tree = make_config_tree(main_dict["project"], "/project")
-
-    site_config = {
-        "projects": [
-            {
-                "text": f"{project_name.capitalize()}",
-                "link": f"/{project_name}/",
-                "children": config_tree["children"],
-            }
-        ]
-    }
-    return site_config
-
-
-def clean_output_folders(project_dir, site_config_file, outdir):
+def clean_output_folder(outdir):
     """ Remove all files present in our output folders. """
 
     if outdir.exists():
         shutil.rmtree(outdir)
-    if project_dir.exists():
-        shutil.rmtree(project_dir)
-    if site_config_file.exists():
-        site_config_file.unlink()
 
 
 if __name__ == "__main__":

@@ -9,9 +9,15 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "serve": "vitepress serve"
+    "serve": "vitepress serve",
+    "test": "jest"
   },
   "devDependencies": {
+    "jest": "^26.6.3",
     "vitepress": "^0.12.2"
+  },
+  "dependencies": {
+    "glob": "^7.1.6",
+    "lodash": "^4.17.21"
   }
 }

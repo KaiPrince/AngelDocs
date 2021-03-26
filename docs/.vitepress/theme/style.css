@@ -57,6 +57,10 @@ img.logo {
   color: var(--textColor) !important;
 }
 
+.nav-bar .nav-link {
+  text-transform: capitalize;
+}
+
 .nav-bar a.item:hover,
 .nav-bar a.item.active {
   border-bottom-color: var(--accentColor);
