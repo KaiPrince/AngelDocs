@@ -49,6 +49,10 @@ img.logo {
   height: 2.2rem !important;
 }
 
+.action a.item:hover {
+  background-color: var(--secondaryColor) !important;
+}
+
 .nav-bar {
   background-color: #30455c !important;
 }
