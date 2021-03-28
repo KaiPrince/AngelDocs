@@ -39,10 +39,15 @@ describe("Side bar links", () => {
           text: _.capitalize(`${projectName}`),
           children: [
             {
-              text: "__init__",
-              link: `/projects/${projectName}/module/__init__`,
+              text: "Module",
+              children: [
+                { text: "file", link: `/projects/${projectName}/module/file` },
+                {
+                  text: "__init__",
+                  link: `/projects/${projectName}/module/__init__`,
+                },
+              ],
             },
-            { text: "file", link: `/projects/${projectName}/module/file` },
             { text: "setup", link: `/projects/${projectName}/setup` },
           ],
         },
@@ -53,6 +58,6 @@ describe("Side bar links", () => {
     const links = makeSidebarLinks();
 
     // Assert
-    expect(links).toStrictEqual(expected);
+    expect(links).toEqual(expected);
   });
 });

@@ -5,49 +5,64 @@
  * Date: Thu, Mar 25, 2021
  * Description: This file contains utility functions.
  */
-const glob = require("glob");
 const _ = require("lodash");
+const dirTree = require("directory-tree");
+const _path = require("path");
 
 const PROJECTS_DIR = "projects";
 
-const searchFiles = (globPattern) => glob.sync(globPattern).map((f) => "/" + f);
+const searchFiles = (path, extensions, callback) =>
+  dirTree(
+    path,
+    {
+      extensions,
+      normalizePath: true,
+    },
+    callback
+  );
 
-const makeSidebarLinks = (globPattern = `${PROJECTS_DIR}/**/*.md`) => {
-  const allFiles = searchFiles(globPattern);
+const makeNavLinks = (path = `${PROJECTS_DIR}`) =>
+  searchFiles(path).children.reduce(
+    (acc, { path, name }) => [
+      ...acc,
+      {
+        text: _.capitalize(name),
+        link: "/" + path + "/",
+      },
+    ],
+    []
+  );
 
-  const projects = allFiles.reduce((acc, file) => {
-    const project = file.split("/")[2];
-    const projectLink = `/${file.split("/")[1]}/${project}/`;
-    const fileName = file.slice(
-      file.lastIndexOf("/") + 1,
-      file.lastIndexOf(".")
-    );
-    const fileLink = file.slice(0, file.lastIndexOf("."));
+const makeSidebarLinks = (path = `${PROJECTS_DIR}`, ext = /\.md/) => {
+  const allFiles = searchFiles(path, ext);
 
-    const result = {
-      [projectLink]: [
-        {
-          text: _.capitalize(project),
-          children: [
-            ...(acc[projectLink] ? acc[projectLink][0].children : []),
-            {
-              text: fileName,
-              link: fileLink,
-            },
-          ],
-        },
-      ],
-    };
-    return result;
-  }, {});
+  const makeTree = (node) => {
+    if (node.type == "file") {
+      const ext = _path.extname(node.path);
+      const withoutExt = (path) => path.replace(ext, "");
+      return {
+        text: withoutExt(node.name),
+        link: "/" + withoutExt(node.path),
+      };
+    } else if (node.type == "directory") {
+      return {
+        text: _.capitalize(node.name),
+        children: node.children.map(makeTree),
+      };
+    } else {
+      throw EvalError(`Unknown node type: ${node.type}`);
+    }
+  };
+
+  const projects = allFiles.children.reduce(
+    (acc, project) => ({
+      ...acc,
+      [`/${project.path}/`]: [makeTree(project)],
+    }),
+    {}
+  );
 
   return projects;
 };
 
-const makeNavLinks = (globPattern = `${PROJECTS_DIR}/*`) =>
-  searchFiles(globPattern).map((link) => ({
-    text: _.capitalize(link.split("/").reverse()[0]),
-    link: link + "/",
-  }));
-
-module.exports = { makeSidebarLinks, makeNavLinks };
+module.exports = { makeNavLinks, makeSidebarLinks };
