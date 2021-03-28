@@ -17,7 +17,7 @@ module.exports = {
       "link",
       {
         rel: "shortcut icon",
-        href: baseUrl ? `/${baseUrl}/favicon.ico` : "/favicon.ico",
+        href: baseUrl ? `${baseUrl}/favicon.ico` : "/favicon.ico",
       },
     ],
   ],
