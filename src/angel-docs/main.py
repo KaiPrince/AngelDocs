@@ -9,8 +9,10 @@ import shutil
 import argparse
 from pathlib import Path
 import json
+from typing import Dict, List, Union
 import pycco
-from markdownify import markdownify
+from collections import defaultdict
+import itertools
 
 import config
 
@@ -39,37 +41,31 @@ def main():
     )
     parser.add_argument("files", nargs="*", type=str, help="files to process")
     args = parser.parse_args()
-
-    # Resolve file globs
-    files = []
-    for raw_source in args.files:
-        for file_or_dir in Path(".").glob(raw_source):
-            if file_or_dir.is_dir():
-                files.extend([file for file in file_or_dir.rglob("*.*")])
-            else:
-                files.append(file_or_dir)
+    raw_sources = args.files
 
     # Get job paths.
     project_name = str(args.output_dir).strip("\"'")
-    project_dir = Path(config.site_dir) / project_name
-    site_config_file = Path(config.site_dir) / "siteConfig.json"
-    outdir = config.outdir
+    project_dir = Path(config.documents_path) / project_name
+    outdir = config.build_path
 
-    # Clean output folders
-    if outdir.exists():
-        shutil.rmtree(outdir)
-    outdir.mkdir()
+    clean_output_folder(outdir)
 
-    if project_dir.exists():
-        shutil.rmtree(project_dir)
-    project_dir.mkdir()
+    build_docs(raw_sources, outdir)
 
-    if site_config_file.exists():
-        site_config_file.unlink()
+    # Create index file
+    (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
+    # Move files to static site
+    shutil.copytree(outdir, project_dir, dirs_exist_ok=True)
+
+    print("Done.")
+
+
+def build_docs(raw_sources: List[str], raw_outdir: str):
+    files = resolve_file_sources(raw_sources)
+    outdir = Path(raw_outdir).resolve()
     # Run pycco on files
-    pycco.process(files, outdir=str(outdir.resolve()), skip=True, md=True)
-
+    pycco.process(files, outdir=str(outdir), skip=True, md=True)
     # Post-process files
     for file in outdir.rglob("*.md"):
         content = file.read_text()
@@ -77,35 +73,33 @@ def main():
             safe_content = content.replace("<tab>", "tab")
             file.write_text(safe_content)
 
-    # Make config
-    files = [
-        {
-            "text": file.stem,
-            "link": (Path(project_name) / file.relative_to(outdir).stem).as_posix(),
-        }
-        for file in outdir.rglob("*.*")
-    ]
-    site_config = {
-        "projects": [
-            {
-                "text": f"{project_name.capitalize()}",
-                "link": f"/{project_name}/",
-                "tree": files,
-            }
-        ]
-    }
-    # Write config file for static site generator.
-    site_config_file.write_text(json.dumps(site_config))
 
-    # Create index file
-    (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
+def resolve_file_sources(raw_sources: List[str]) -> List[str]:
+    """Consumes a list of file path strings or glob strings and produces a list
+    of file path strings."""
 
-    # Move files to static site
-    # shutil.copytree(outdir, project_dir)
-    for file in outdir.rglob("*.*"):
-        file.replace(project_dir / (file.name))
+    files = []
+    for raw_source in raw_sources:
+        if Path(raw_source).is_absolute():
+            raw_source = str(Path(raw_source).relative_to(Path.cwd()))
+        for file_or_dir in Path.cwd().glob(raw_source):
+            if file_or_dir.is_dir():
+                files.extend(
+                    [
+                        str(file.relative_to(Path.cwd()))
+                        for file in file_or_dir.rglob("*.*")
+                    ]
+                )
+            else:
+                files.append(str(file_or_dir.relative_to(Path.cwd())))
+    return files
 
-    print("Done.")
+
+def clean_output_folder(outdir):
+    """ Remove all files present in our output folders. """
+
+    if outdir.exists():
+        shutil.rmtree(outdir)
 
 
 if __name__ == "__main__":

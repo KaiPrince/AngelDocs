@@ -12,5 +12,6 @@ config.local.js
 basement_dist
 
 # ADDED: Generated files
-siteConfig.json
-public/pages/
+public/projects/
+projects/**
+!projects/.gitkeep
