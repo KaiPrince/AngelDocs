@@ -12,11 +12,19 @@ module.exports = {
   title: process.env.APP_TITLE || "AngelDocs",
   description: description,
   base: baseUrl || "/",
+  head: [
+    [
+      "link",
+      {
+        rel: "shortcut icon",
+        href: baseUrl ? `/${baseUrl}/favicon.ico` : "/favicon.ico",
+      },
+    ],
+  ],
   themeConfig: {
     repo: process.env.REPO || "KaiPrince/AngelDocs",
     docsDir: process.env.DOCS_DIR || "docs",
-    editLinks: true,
-
+    editLinks: false,
     logo: "/logo-icon.png",
     nav: [
       {
