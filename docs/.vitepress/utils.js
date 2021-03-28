@@ -11,7 +11,7 @@ const _path = require("path");
 
 const PROJECTS_DIR = "projects";
 
-const searchFiles = (path, extensions, callback) =>
+const searchFiles = (path, extensions = /^\..*/, callback) =>
   dirTree(
     path,
     {
@@ -27,7 +27,7 @@ const makeNavLinks = (path = `${PROJECTS_DIR}`) =>
       ...acc,
       {
         text: _.capitalize(name),
-        link: "/" + path + "/",
+        link: `/${path}/`,
       },
     ],
     []
