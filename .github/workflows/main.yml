@@ -31,6 +31,9 @@ jobs:
     needs: tag
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: src/angel-docs
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -39,7 +42,7 @@ jobs:
       # Run our action to document our code
       - uses: KaiPrince/AngelDocs@latest
         with:
-          files: src/**/*.py
+          files: "**/*.py"
           folder: dist
           base-url: AngelDocs
 
