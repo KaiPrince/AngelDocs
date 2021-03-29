@@ -8,11 +8,9 @@
 import shutil
 import argparse
 from pathlib import Path
-import json
-from typing import Dict, List, Union
+from typing import List
 import pycco
-from collections import defaultdict
-import itertools
+import glob
 
 import config
 
@@ -82,7 +80,11 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
     for raw_source in raw_sources:
         if Path(raw_source).is_absolute():
             raw_source = str(Path(raw_source).relative_to(Path.cwd()))
-        for file_or_dir in Path.cwd().glob(raw_source):
+        for file_or_dir in glob.glob(raw_source):
+            if not Path(file_or_dir).exists():
+                print(f"{file_or_dir} doesn't exist. Skipping.")
+                continue
+            file_or_dir = Path(file_or_dir).resolve()
             if file_or_dir.is_dir():
                 files.extend(
                     [
