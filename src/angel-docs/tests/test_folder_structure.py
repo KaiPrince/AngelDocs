@@ -141,8 +141,34 @@ def test_folder_nesting_absolute_path(
     ]
 
     # Act
-    breakpoint()
     build_docs(sources, output_dir)
+
+    # Assert
+    for path in expected:
+        assert Path(path).exists()
+    assert not Path("output/.ignoreme").exists()
+    assert not Path("output/.ignoremetoo").exists()
+
+
+@pytest.mark.parametrize(
+    ("source_paths", "expected_paths"),
+    [
+        [
+            ["project"],
+            ["setup.md", "module/__init__.md", "module/file.md"],
+        ],
+    ],
+)
+@pytest.mark.usefixtures("change_test_dir")
+def test_recurse_folder(source_paths, expected_paths):
+    """ Resursively searches the children when given a folder. """
+
+    # Arrange
+    output_dir = "output"
+    expected = [f"{output_dir}/project/{path}" for path in expected_paths]
+
+    # Act
+    build_docs(source_paths, output_dir)
 
     # Assert
     for path in expected:
