@@ -51,7 +51,7 @@ def main():
     build_docs(raw_sources, outdir)
 
     # Create index file
-    print([dir for dir in Path.iterdir()])
+    print([dir for dir in Path.cwd().iterdir()])
     if not (outdir / "index.md").exists():
         (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
