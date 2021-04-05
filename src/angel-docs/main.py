@@ -8,11 +8,9 @@
 import shutil
 import argparse
 from pathlib import Path
-import json
-from typing import Dict, List, Union
+from typing import List
 import pycco
-from collections import defaultdict
-import itertools
+import glob
 
 import config
 
@@ -53,6 +51,8 @@ def main():
     build_docs(raw_sources, outdir)
 
     # Create index file
+    if not outdir.exists():
+        raise ValueError("Output folder was not created. Something went wrong.")
     (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
@@ -63,6 +63,7 @@ def main():
 
 def build_docs(raw_sources: List[str], raw_outdir: str):
     files = resolve_file_sources(raw_sources)
+    print("files", files)
     outdir = Path(raw_outdir).resolve()
     # Run pycco on files
     pycco.process(files, outdir=str(outdir), skip=True, md=True)
@@ -80,9 +81,20 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
 
     files = []
     for raw_source in raw_sources:
+        # Replace absolute paths with relative.
         if Path(raw_source).is_absolute():
             raw_source = str(Path(raw_source).relative_to(Path.cwd()))
-        for file_or_dir in Path.cwd().glob(raw_source):
+
+        # Resolve source or glob.
+        for file_or_dir in Path(".").glob(raw_source):
+            if not Path(file_or_dir).exists():
+                print(f"{file_or_dir} doesn't exist. Skipping.")
+                continue
+
+            # Resolve symlinks or "../"
+            file_or_dir = Path(file_or_dir).resolve()
+
+            # Collect file(s)
             if file_or_dir.is_dir():
                 files.extend(
                     [
@@ -92,6 +104,16 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
                 )
             else:
                 files.append(str(file_or_dir.relative_to(Path.cwd())))
+
+    def is_dotfile_or_folder(filename: str):
+        """ Returns True if the file or any parent folder starts with '.' """
+        return Path(filename).stem.startswith(".") or any(
+            part.startswith(".") for part in Path(filename).parts
+        )
+
+    # Filter out any dotfiles
+    files = [file for file in files if not is_dotfile_or_folder(file)]
+
     return files
 
 

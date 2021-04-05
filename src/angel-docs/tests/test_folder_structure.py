@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 import shutil
 import pytest
-from main import build_docs, make_site_config
+from main import build_docs
 
 
 @pytest.fixture(autouse=True)
@@ -49,7 +49,13 @@ def change_test_dir(request, tmp_path):
     ("source_paths", "expected_paths"),
     [
         [
-            ["setup.py", "module/__init__.py", "module/file.py"],
+            [
+                "setup.py",
+                "module/__init__.py",
+                "module/file.py",
+                ".ignoreme",
+                ".ignoremetoo/ignored.py",
+            ],
             ["setup.md", "module/__init__.md", "module/file.md"],
         ],
         [
@@ -82,6 +88,8 @@ def test_folder_nesting(
     # Assert
     for path in expected:
         assert Path(path).exists()
+    assert not Path("output/.ignoreme").exists()
+    assert not Path("output/.ignoremetoo").exists()
 
 
 @pytest.mark.parametrize(
@@ -94,11 +102,21 @@ def test_folder_nesting(
     ("source_paths", "expected_paths"),
     [
         [
-            ["setup.py", "module/__init__.py", "module/file.py"],
+            [
+                "setup.py",
+                "module/__init__.py",
+                "module/file.py",
+                ".ignoreme",
+                ".ignoremetoo/ignored.py",
+            ],
             ["setup.md", "module/__init__.md", "module/file.md"],
         ],
         [
             ["**/*.*"],
+            ["setup.md", "module/__init__.md", "module/file.md"],
+        ],
+        [
+            [""],
             ["setup.md", "module/__init__.md", "module/file.md"],
         ],
     ],
@@ -128,3 +146,32 @@ def test_folder_nesting_absolute_path(
     # Assert
     for path in expected:
         assert Path(path).exists()
+    assert not Path("output/.ignoreme").exists()
+    assert not Path("output/.ignoremetoo").exists()
+
+
+@pytest.mark.parametrize(
+    ("source_paths", "expected_paths"),
+    [
+        [
+            ["project"],
+            ["setup.md", "module/__init__.md", "module/file.md"],
+        ],
+    ],
+)
+@pytest.mark.usefixtures("change_test_dir")
+def test_recurse_folder(source_paths, expected_paths):
+    """ Resursively searches the children when given a folder. """
+
+    # Arrange
+    output_dir = "output"
+    expected = [f"{output_dir}/project/{path}" for path in expected_paths]
+
+    # Act
+    build_docs(source_paths, output_dir)
+
+    # Assert
+    for path in expected:
+        assert Path(path).exists()
+    assert not Path("output/.ignoreme").exists()
+    assert not Path("output/.ignoremetoo").exists()
