@@ -48,13 +48,14 @@ def main():
 
     clean_output_folder(outdir)
 
+    print("sources", raw_sources)
+
     build_docs(raw_sources, outdir)
 
     # Create index file
-    print("outdir", str(outdir))
-    print([dir for dir in outdir.iterdir()])
-    if not (outdir / "index.md").exists():
-        (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
+    if not outdir.exists():
+        raise ValueError("Output folder was not created. Something went wrong.")
+    (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
     shutil.copytree(outdir, project_dir, dirs_exist_ok=True)
@@ -64,6 +65,7 @@ def main():
 
 def build_docs(raw_sources: List[str], raw_outdir: str):
     files = resolve_file_sources(raw_sources)
+    print("files", files)
     outdir = Path(raw_outdir).resolve()
     # Run pycco on files
     pycco.process(files, outdir=str(outdir), skip=True, md=True)
