@@ -78,13 +78,20 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
 
     files = []
     for raw_source in raw_sources:
+        # Replace absolute paths with relative.
         if Path(raw_source).is_absolute():
             raw_source = str(Path(raw_source).relative_to(Path.cwd()))
+
+        # Resolve source or glob.
         for file_or_dir in Path(".").glob(raw_source):
             if not Path(file_or_dir).exists():
                 print(f"{file_or_dir} doesn't exist. Skipping.")
                 continue
+
+            # Resolve symlinks or "../"
             file_or_dir = Path(file_or_dir).resolve()
+
+            # Collect file(s)
             if file_or_dir.is_dir():
                 files.extend(
                     [
@@ -96,11 +103,14 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
                 files.append(str(file_or_dir.relative_to(Path.cwd())))
 
     def is_dotfile_or_folder(filename: str):
+        """ Returns True if the file or any parent folder starts with '.' """
         return Path(filename).stem.startswith(".") or any(
             part.startswith(".") for part in Path(filename).parts
         )
 
+    # Filter out any dotfiles
     files = [file for file in files if not is_dotfile_or_folder(file)]
+
     return files
 
 
