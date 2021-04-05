@@ -141,6 +141,7 @@ def test_folder_nesting_absolute_path(
     ]
 
     # Act
+    breakpoint()
     build_docs(sources, output_dir)
 
     # Assert
