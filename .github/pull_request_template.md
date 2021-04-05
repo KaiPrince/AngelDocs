@@ -16,10 +16,10 @@
 
 None.
 
-## Checklist
+## Pre-merge checklist
 
 - [ ] No new warnings are introduced
-- [ ] Comments and documentation have been updated
+- [ ] Comments and documentation are up to date
 - [ ] TODOs resolved or added to issue tracker
 - [ ] No commented-out code
 - [ ] This isn't a 'quick-and-dirty' job
