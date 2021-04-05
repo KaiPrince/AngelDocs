@@ -49,6 +49,7 @@ def main():
     clean_output_folder(outdir)
 
     print("sources", raw_sources)
+    print("CWD", Path.cwd().absolute())
     print([dir for dir in Path(".").iterdir()])
 
     build_docs(raw_sources, outdir)
