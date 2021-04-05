@@ -51,7 +51,8 @@ def main():
     build_docs(raw_sources, outdir)
 
     # Create index file
-    (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
+    if not (outdir / "index.md").exists():
+        (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
 
     # Move files to static site
     shutil.copytree(outdir, project_dir, dirs_exist_ok=True)
