@@ -75,3 +75,22 @@ a.sidebar-link-item:hover {
   text-decoration: revert;
   color: var(--linkColor);
 }
+
+/* SIDEBAR */
+.sidebar
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-links
+  > .sidebar-link
+  > .sidebar-link-item
+  + .sidebar-link-item {
+  display: block;
+  padding: 0.3rem 1.5rem 0.3rem 4.5rem;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
