@@ -1,6 +1,7 @@
 # Thoughts on development methodology
 
-By [Albert O'Connor](http://albertoconnor.ca/) and others at Bungalow.
+> A Slack thread with [Albert O'Connor](http://albertoconnor.ca/) and others at Bungalow.
+> Collected by Kai Prince.
 
 This is a mix of cultural and procedural thoughts, but it can live here.
 Individuals and interactions over processes and tools.
