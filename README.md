@@ -96,7 +96,7 @@ To use the github action, add this snippet.
 # Run our action to document our code
 - uses: KaiPrince/AngelDocs@latest
 with:
-    files: src/**/*.*
+    files: src
     folder: dist
     base-url: AngelDocs # REPLACE WITH BASE PATH FROM ROOT
     project-name: Angel-docs # REPLACE WITH YOUR PROJECT NAME
@@ -134,7 +134,7 @@ jobs:
       # Run our action to document our code
       - uses: KaiPrince/AngelDocs@latest
         with:
-          files: src/**/*.*
+          files: src
           folder: dist
           base-url: AngelDocs # REPLACE WITH YOUR REPO NAME
           project-name: Angel-docs # REPLACE WITH YOUR PROJECT NAME
