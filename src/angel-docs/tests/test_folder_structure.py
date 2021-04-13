@@ -5,32 +5,9 @@
 * Date: Tue, Mar 23, 2021
 * Description: This file contains tests for the nested folder structure feature.
 """
-import os
 from pathlib import Path
-import shutil
 import pytest
 from main import build_docs
-
-
-@pytest.fixture(autouse=True)
-def test_files_dir(tmp_path, request):
-    """ Copy mock files to temp directory. """
-    path_of_current_module = request.fspath.dirname
-    FILES_FOLDER = os.path.join(path_of_current_module, "sample")
-
-    # Copy files in test uploads folder to temp directory
-    shutil.copytree(FILES_FOLDER, tmp_path, dirs_exist_ok=True)
-
-    yield tmp_path
-
-    # Teardown
-
-
-@pytest.fixture(scope="function")
-def change_test_dir(request, tmp_path):
-    os.chdir(tmp_path)
-    yield os.chdir
-    os.chdir(request.config.invocation_dir)
 
 
 @pytest.mark.parametrize(
