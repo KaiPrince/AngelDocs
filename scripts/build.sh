@@ -19,11 +19,15 @@ StaticSiteMain="${STATICSITE_MAIN:-docs}"
 OutputFolder="${FOLDER:-dist}"
 
 # The source files to use.
-Source="${@:src}"
+if [[ -z "$@" ]]; then
+  Source="src"
+else
+  Source=$@
+fi
 
 
 # Run document generator
-python $AngelDocsMain $@
+python $AngelDocsMain $Source
 
 # Run static site builder
 yarn --cwd $StaticSiteMain build
