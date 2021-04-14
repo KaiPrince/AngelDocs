@@ -19,7 +19,10 @@ COPY docs/yarn.lock /yarn.lock
 RUN yarn --cwd / --modules-folder /app/docs/node_modules install --frozen-lockfile
 
 COPY . /app
-COPY action.sh /action.sh
-RUN chmod +x /action.sh
+COPY scripts/build.sh /build.sh
+RUN chmod +x /build.sh
 
-ENTRYPOINT [ "/action.sh" ]
+ENV ANGELDOCS_MAIN=/app/src/angel-docs/main.py
+ENV STATICSITE_MAIN=/app/docs
+
+ENTRYPOINT [ "/build.sh" ]
