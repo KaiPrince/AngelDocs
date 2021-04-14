@@ -31,7 +31,7 @@ SourceFiles="test"
 
 # Run document generator
 echo Running AngelDocs on $SourceFiles
-echo python version is $(python --version)
+echo python version is $(python3 --version)
 python $AngelDocsMain $SourceFiles
 
 # Run static site builder
