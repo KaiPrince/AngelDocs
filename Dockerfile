@@ -19,7 +19,7 @@ COPY docs/yarn.lock /yarn.lock
 RUN yarn --cwd / --modules-folder /app/docs/node_modules install --frozen-lockfile
 
 COPY . /app
-COPY action.sh /action.sh
+COPY scripts/action.sh /action.sh
 RUN chmod +x /action.sh
 
 ENTRYPOINT [ "/action.sh" ]
