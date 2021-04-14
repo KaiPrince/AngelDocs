@@ -23,8 +23,11 @@ OutputFolder="${FOLDER:-dist}"
 if [[ -z "$@" ]]; then
   SourceFiles="src"
 else
-  SourceFiles=$@
+  SourceFiles="$@"
 fi
+
+# Python or Python3
+PythonExecutable="${PYTHON_EXECUTABLE:-python}"
 
 SourceFiles="src"
 
@@ -32,7 +35,7 @@ SourceFiles="src"
 # Run document generator
 echo Running AngelDocs on $SourceFiles
 echo python version is $(python --version)
-python $AngelDocsMain $SourceFiles
+$PythonExecutable $AngelDocsMain $SourceFiles
 
 # Run static site builder
 yarn --cwd $StaticSiteMain build
