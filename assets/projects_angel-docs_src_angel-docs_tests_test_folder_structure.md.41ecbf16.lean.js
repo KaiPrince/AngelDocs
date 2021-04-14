@@ -1,0 +1,1 @@
+import{o as n,c as s,a}from"./app.3fd7882d.js";const t='{"title":"","description":"","frontmatter":{},"relativePath":"projects/angel-docs/src/angel-docs/tests/test_folder_structure.md","lastUpdated":1618362922888}',p={},o=a('',35);p.render=function(a,t,p,c,e,u){return n(),s("div",null,[o])};export default p;export{t as __pageData};

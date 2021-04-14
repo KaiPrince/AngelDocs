@@ -1,1 +1,0 @@
-import{o as e,c as t,b as d}from"./app.ded3dea8.js";const r='{"title":"","description":"","frontmatter":{},"relativePath":"projects/angel-docs/index.md","lastUpdated":1618362624555}',a={},n=d("p",null,"Angel-docs",-1);a.render=function(d,r,a,o,l,s){return e(),t("div",null,[n])};export default a;export{r as __pageData};
