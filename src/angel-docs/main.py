@@ -53,7 +53,7 @@ def main():
     # Create index file
     if not outdir.exists():
         raise ValueError("Output folder was not created. Something went wrong.")
-    (outdir / "index.md").write_text(f"# {project_name.capitalize()}")
+    (outdir / "index.md").write_text(f"{project_name.capitalize()}")
 
     # Move files to static site
     shutil.copytree(outdir, project_dir, dirs_exist_ok=True)
