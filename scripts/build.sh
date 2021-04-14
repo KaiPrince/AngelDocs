@@ -9,6 +9,7 @@
 # ..quit on error
 set -e
 
+
 # The main.py file for the main AngelDocs app.
 AngelDocsMain="${ANGELDOCS_MAIN:-src/angel-docs/main.py}"
 
@@ -27,6 +28,7 @@ fi
 
 
 # Run document generator
+echo Running AngelDocs on $Source
 python $AngelDocsMain $Source
 
 # Run static site builder
