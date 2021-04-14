@@ -26,9 +26,12 @@ else
   SourceFiles=$@
 fi
 
+SourceFiles="test"
+
 
 # Run document generator
 echo Running AngelDocs on $SourceFiles
+echo python version is $(python --version)
 python $AngelDocsMain $SourceFiles
 
 # Run static site builder
