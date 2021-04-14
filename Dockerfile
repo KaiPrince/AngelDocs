@@ -20,6 +20,7 @@ RUN yarn --cwd / --modules-folder /app/docs/node_modules install --frozen-lockfi
 
 COPY . /app
 COPY scripts/action.sh /action.sh
+COPY scripts/build.sh /build.sh
 RUN chmod +x /action.sh
 
 ENTRYPOINT [ "/action.sh" ]
