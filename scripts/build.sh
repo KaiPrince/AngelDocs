@@ -26,7 +26,7 @@ else
   SourceFiles=$@
 fi
 
-SourceFiles="test"
+SourceFiles="src"
 
 
 # Run document generator
