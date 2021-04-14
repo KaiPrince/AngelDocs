@@ -21,15 +21,15 @@ OutputFolder="${FOLDER:-dist}"
 
 # The source files to use.
 if [[ -z "$@" ]]; then
-  Source="src"
+  SourceFiles="src"
 else
-  Source=$@
+  SourceFiles=$@
 fi
 
 
 # Run document generator
-echo Running AngelDocs on $Source
-python $AngelDocsMain $Source
+echo Running AngelDocs on $SourceFiles
+python $AngelDocsMain $SourceFiles
 
 # Run static site builder
 yarn --cwd $StaticSiteMain build
