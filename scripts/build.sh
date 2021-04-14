@@ -4,7 +4,7 @@
 # File Name: build.sh
 # Programmer: Kai Prince
 # Date: Tue, Apr 13, 2021
-# Description: This file contains the build script.
+# Description: This file contains the build script intended for use by CI.
 
 # ..quit on error
 set -e
@@ -20,6 +20,7 @@ OutputFolder="${FOLDER:-dist}"
 
 # The source files to use.
 Source="${@:src}"
+
 
 # Run document generator
 python $AngelDocsMain $@
