@@ -34,7 +34,8 @@ SourceFiles="src"
 
 # Run document generator
 echo Running AngelDocs on $SourceFiles
-echo python version is $(python --version)
+echo python version is 
+$PythonExecutable --version
 $PythonExecutable $AngelDocsMain $SourceFiles
 
 # Run static site builder
