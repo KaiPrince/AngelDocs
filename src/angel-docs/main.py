@@ -73,6 +73,11 @@ def build_docs(raw_sources: List[str], raw_outdir: str):
         if "<tab>" in content:
             safe_content = content.replace("<tab>", "tab")
             file.write_text(safe_content)
+    # Copy readmes
+    for file in files:
+        if file.endswith(".md"):
+            output_file = outdir.joinpath(file)
+            shutil.copy(file, str(output_file))
 
 
 def resolve_file_sources(raw_sources: List[str]) -> List[str]:
