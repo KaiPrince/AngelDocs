@@ -10,7 +10,6 @@ import argparse
 from pathlib import Path
 from typing import List
 import pycco
-import glob
 
 import config
 
@@ -37,9 +36,19 @@ def main():
         default="docs",
         help="The name of the project page for these files.",
     )
-    parser.add_argument("files", nargs="*", type=str, help="files to process")
+    parser.add_argument(
+        "-i",
+        "--ignore-path",
+        type=str,
+        dest="ignore_paths",
+        default=[],
+        action="append",
+        help="Glob pattern to ignore (e.g. project/modules/**)",
+    )
+    parser.add_argument("files", nargs="*", type=str, help="Files to process")
     args = parser.parse_args()
     raw_sources = args.files
+    ignore_paths = args.ignore_paths
 
     # Get job paths.
     project_name = str(args.output_dir).strip("\"'")
@@ -48,7 +57,8 @@ def main():
 
     clean_output_folder(outdir)
 
-    build_docs(raw_sources, outdir)
+    files = resolve_file_sources(raw_sources, ignore_paths=ignore_paths)
+    build_docs(files, outdir)
 
     # Create index file
     if not outdir.exists():
@@ -61,9 +71,7 @@ def main():
     print("Done.")
 
 
-def build_docs(raw_sources: List[str], raw_outdir: str):
-    files = resolve_file_sources(raw_sources)
-    print("files", files)
+def build_docs(files: List[str], raw_outdir: str):
     outdir = Path(raw_outdir).resolve()
     # Run pycco on files
     pycco.process(files, outdir=str(outdir), skip=True, md=True)
@@ -80,9 +88,14 @@ def build_docs(raw_sources: List[str], raw_outdir: str):
             shutil.copy(file, str(output_file))
 
 
-def resolve_file_sources(raw_sources: List[str]) -> List[str]:
+def resolve_file_sources(
+    raw_sources: List[str], ignore_paths: List[str] = None
+) -> List[str]:
     """Consumes a list of file path strings or glob strings and produces a list
     of file path strings."""
+
+    if ignore_paths is None:
+        ignore_paths = []
 
     files = []
     for raw_source in raw_sources:
@@ -116,8 +129,17 @@ def resolve_file_sources(raw_sources: List[str]) -> List[str]:
             part.startswith(".") for part in Path(filename).parts
         )
 
+    def is_ignored(filename: str):
+        """ Returns True if the file matches an ignored path. """
+        return any(
+            Path(x).as_posix() in Path(filename).as_posix() for x in ignore_paths
+        )
+
     # Filter out any dotfiles
     files = [file for file in files if not is_dotfile_or_folder(file)]
+
+    # Filter out any ignored paths
+    files = [file for file in files if not is_ignored(file)]
 
     return files
 
