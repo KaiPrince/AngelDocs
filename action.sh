@@ -18,4 +18,5 @@ yarn --cwd /app/site build
 
 
 # Copy site to output folder
-cp -f -R -v /app/site/.vitepress/dist "$FOLDER"
+mkdir -p "$FOLDER"
+cp -f -R -v /app/docs/.vitepress/dist/* "$FOLDER"
