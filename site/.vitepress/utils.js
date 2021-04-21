@@ -42,7 +42,7 @@ const makeSidebarLinks = (path = `${PROJECTS_DIR}`, ext = /\.md/) => {
       const withoutExt = (path) => path.replace(ext, "");
       const withSpaces = (s) => String(s).replace("-", " ").replace("_", " ");
       return {
-        text: withoutExt(node.name),
+        text: _.capitalize(withSpaces(withoutExt(node.name))),
         link: "/" + withoutExt(node.path),
       };
     } else if (node.type == "directory") {
