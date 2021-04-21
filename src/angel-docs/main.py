@@ -44,7 +44,7 @@ def main():
         dest="ignore_paths",
         default=[],
         action="append",
-        help="Glob pattern to ignore (e.g. project/modules/**)",
+        help="Glob pattern to ignore (e.g. project/modules/**/*)",
     )
     parser.add_argument("files", nargs="*", type=str, help="Files to process")
     args = parser.parse_args()
