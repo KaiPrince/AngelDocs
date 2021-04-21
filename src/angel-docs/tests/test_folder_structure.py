@@ -7,7 +7,7 @@
 """
 from pathlib import Path
 import pytest
-from main import build_docs
+from main import build_docs, resolve_file_sources
 
 
 @pytest.mark.parametrize(
@@ -60,7 +60,8 @@ def test_folder_nesting(
     expected = [f"{output_dir}/{source_dir}/{path}" for path in expected_paths]
 
     # Act
-    build_docs(sources, output_dir)
+    files = resolve_file_sources(sources)
+    build_docs(files, output_dir)
 
     # Assert
     for path in expected:
@@ -118,7 +119,8 @@ def test_folder_nesting_absolute_path(
     ]
 
     # Act
-    build_docs(sources, output_dir)
+    files = resolve_file_sources(sources)
+    build_docs(files, output_dir)
 
     # Assert
     for path in expected:
@@ -145,7 +147,8 @@ def test_recurse_folder(source_paths, expected_paths):
     expected = [f"{output_dir}/project/{path}" for path in expected_paths]
 
     # Act
-    build_docs(source_paths, output_dir)
+    files = resolve_file_sources(source_paths)
+    build_docs(files, output_dir)
 
     # Assert
     for path in expected:

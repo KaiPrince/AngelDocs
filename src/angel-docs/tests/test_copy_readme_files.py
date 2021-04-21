@@ -6,7 +6,7 @@
 * Description: This file contains tests for the "Copy readme files" feature.
 """
 
-from main import build_docs
+from main import build_docs, resolve_file_sources
 from pathlib import Path
 
 
@@ -18,7 +18,8 @@ def test_copy_readme_file(change_test_dir):
     output_dir = "output"
 
     # Act
-    build_docs(sources, output_dir)
+    files = resolve_file_sources(sources)
+    build_docs(files, output_dir)
 
     # Assert
     assert Path("output/project/module/Readme.md").exists()
