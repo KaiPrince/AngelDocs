@@ -9,6 +9,7 @@ import shutil
 import argparse
 from pathlib import Path
 from typing import List
+from utils import make_ignore_matcher
 import pycco
 
 import config
@@ -129,11 +130,7 @@ def resolve_file_sources(
             part.startswith(".") for part in Path(filename).parts
         )
 
-    def is_ignored(filename: str):
-        """ Returns True if the file matches an ignored path. """
-        return any(
-            Path(x).as_posix() in Path(filename).as_posix() for x in ignore_paths
-        )
+    is_ignored = make_ignore_matcher(ignore_paths)
 
     # Filter out any dotfiles
     files = [file for file in files if not is_dotfile_or_folder(file)]
