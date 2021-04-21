@@ -40,7 +40,6 @@ const makeSidebarLinks = (path = `${PROJECTS_DIR}`, ext = /\.md/) => {
     if (node.type == "file") {
       const ext = _path.extname(node.path);
       const withoutExt = (path) => path.replace(ext, "");
-      const withSpaces = (s) => String(s).replace("-", " ").replace("_", " ");
       return {
         text: withoutExt(node.name),
         link: "/" + withoutExt(node.path),
