@@ -1,0 +1,1 @@
+import{o as t,c as e}from"./app.8e4b94d5.js";const r='{"title":"","description":"","frontmatter":{},"relativePath":"projects/angel-docs/src/angel-docs/pycco.md","lastUpdated":1618971443361}',o={};o.render=function(r,o,a,c,d,s){return t(),e("div")};export default o;export{r as __pageData};
