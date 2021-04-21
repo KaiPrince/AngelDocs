@@ -8,5 +8,5 @@
 from pathlib import Path
 
 
-documents_path = Path(__file__).parent.joinpath("../../docs/projects").resolve()
+documents_path = Path(__file__).parent.joinpath("../../site/projects").resolve()
 build_path = Path(__file__).parent.joinpath("output").resolve()

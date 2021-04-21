@@ -14,8 +14,8 @@ set -e
 python /app/src/angel-docs/main.py $@
 
 # Run static site builder
-yarn --cwd /app/docs build
+yarn --cwd /app/site build
 
 
 # Copy site to output folder
-cp -f -R /app/docs/.vitepress/dist $FOLDER
+cp -f -R -v /app/site/.vitepress/dist "$FOLDER"

@@ -26,29 +26,8 @@ module.exports = {
     docsDir: process.env.DOCS_DIR || "docs",
     editLinks: false,
     logo: "/logo-icon.png",
-    nav: [
-      {
-        text: "Guide",
-        link: "/guide/",
-        activeMatch: "^/guide/",
-      },
-      ...makeNavLinks(),
-      {
-        text: "VitePress",
-        link: "https://vitepress.vuejs.org",
-      },
-    ],
+    nav: [...makeNavLinks()],
     sidebar: {
-      "/guide/": [
-        {
-          text: "Guide",
-          children: [
-            { text: "Introduction", link: "/guide/" },
-            { text: "Using AngelDocs", link: "/guide/using-angel-docs" },
-            { text: "Bungalow Values", link: "/guide/bungalow-values" },
-          ],
-        },
-      ],
       ...makeSidebarLinks(),
     },
   },
