@@ -82,6 +82,22 @@ def build_docs(files: List[str], raw_outdir: str):
         if "<tab>" in content:
             safe_content = content.replace("<tab>", "tab")
             file.write_text(safe_content)
+
+    # Remove empty files
+    def is_empty(text: str):
+        result = True
+
+        for line in text.splitlines():
+            if not line.startswith("```") and not line == "":
+                result = False
+                break
+
+        return result
+
+    for file in outdir.rglob("*"):
+        if file.is_file() and is_empty(file.read_text()):
+            file.unlink()
+
     # Copy readmes
     for file in files:
         if file.endswith(".md"):
