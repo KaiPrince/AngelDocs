@@ -132,7 +132,7 @@ jobs:
       - uses: actions/checkout@v2
 
       # Run our action to document our code
-      - uses: KaiPrince/AngelDocs@latest
+      - uses: KaiPrince/AngelDocs@v0.1
         with:
           files: src
           folder: dist
