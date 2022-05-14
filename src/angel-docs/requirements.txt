@@ -1,2 +1,2 @@
-pytest
+pytest==7.1.2
 git+https://github.com/KaiPrince/pycco.git
