@@ -45,7 +45,6 @@ module.exports = {
           children: [
             { text: "Introduction", link: "/guide/" },
             { text: "Using AngelDocs", link: "/guide/using-angel-docs" },
-            { text: "Bungalow Values", link: "/guide/bungalow-values" },
           ],
         },
       ],

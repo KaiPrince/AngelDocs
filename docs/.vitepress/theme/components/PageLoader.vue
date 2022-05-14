@@ -15,7 +15,6 @@ export default {
       const path = String(this.$page.relativePath).replace(".md", ".html");
       const route = this.$withBase("pages/" + path);
 
-      console.log("here");
       return route;
     },
   },
